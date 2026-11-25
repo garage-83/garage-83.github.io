@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storefront — Featured Products</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background-color: #dee2e6;
+    }
+
+    .product-info {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-info h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #495057;
+      line-height: 1.45;
+      margin-bottom: 0.75rem;
+    }
+
+    .extra-details {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-bottom: 1rem;
+      padding-left: 1.1rem;
+      flex-grow: 1;
+    }
+
+    .extra-details li {
+      margin-bottom: 0.25rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    /* PayPal Button Styling */
+    .paypal-btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ffc439;
+      color: #111111;
+      font-weight: bold;
+      padding: 0.7rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .paypal-btn:hover {
+      background-color: #f2ba36;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Featured Products</h1>
+    <p>Quality everyday essentials delivered to your door.</p>
+  </header>
+
+  <main class="product-grid">
+    <!-- Product 1 -->
+    <article class="product-card">
+      <img src="images/product1.jpg" alt="Wireless Headphones">
+      <div class="product-info">
+        <h2>Wireless Headphones</h2>
+        <p class="description">Over-ear headphones engineered for deep bass and crystal-clear calls during travel or work.</p>
+        <ul class="extra-details">
+          <li>Active noise cancellation</li>
+          <li>30-hour battery life + USB-C fast charge</li>
+          <li>Includes hard carrying case</li>
+        </ul>
+        <div class="price">$129.00</div>
+        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="product-card">
+      <img src="images/product2.jpg" alt="Minimalist Watch">
+      <div class="product-info">
+        <h2>Minimalist Watch</h2>
+        <p class="description">A timeless everyday timepiece featuring a scratch-resistant sapphire crystal face.</p>
+        <ul class="extra-details">
+          <li>40mm brushed stainless steel case</li>
+          <li>Genuine Italian leather strap</li>
+          <li>Water-resistant up to 50 meters</li>
+        </ul>
+        <div class="price">$89.00</div>
+        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="product-card">
+      <img src="images/product3.jpg" alt="Ceramic Coffee Mug">
+      <div class="product-info">
+        <h2>Ceramic Coffee Mug</h2>
+        <p class="description">Hand-thrown stoneware mug with a speckled matte glaze and comfortable wide handle.</p>
+        <ul class="extra-details">
+          <li>12 oz (350 ml) capacity</li>
+          <li>Dishwasher and microwave safe</li>
+          <li>Thick walls for heat retention</li>
+        </ul>
+        <div class="price">$24.00</div>
+        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- Product 4 -->
+    <article class="product-card">
+      <img src="images/product4.jpg" alt="Canvas Backpack">
+      <div class="product-info">
+        <h2>Canvas Backpack</h2>
+        <p class="description">Weather-resistant commuter bag built with heavy-duty waxed canvas and brass hardware.</p>
+        <ul class="extra-details">
+          <li>Padded sleeve fits up to 15" laptops</li>
+          <li>Hidden anti-theft back pocket</li>
+          <li>20-liter main compartment</li>
+        </ul>
+        <div class="price">$65.00</div>
+        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- Product 5 -->
+    <article class="product-card">
+      <img src="images/product5.jpg" alt="Mechanical Keyboard">
+      <div class="product-info">
+        <h2>Mechanical Keyboard</h2>
+        <p class="description">Compact 75% wireless keyboard designed for fast, comfortable typing across multiple devices.</p>
+        <ul class="extra-details">
+          <li>Hot-swappable tactile brown switches</li>
+          <li>Connects via Bluetooth 5.1 or USB-C</li>
+          <li>Compatible with Windows & macOS</li>
+        </ul>
+        <div class="price">$110.00</div>
+        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- Product 6 -->
+    <article class="product-card">
+      <img src="images/product6.jpg" alt="Desk Lamp">
+      <div class="product-info">
+        <h2>LED Desk Lamp</h2>
+        <p class="description">Sleek anodized aluminum task lamp that reduces eye strain during late-night work sessions.</p>
+        <ul class="extra-details">
+          <li>5 brightness levels & 3 color modes</li>
+          <li>180-degree adjustable swing arm</li>
+          <li>Built-in USB charging port on base</li>
+        </ul>
+        <div class="price">$45.00</div>
+        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>
