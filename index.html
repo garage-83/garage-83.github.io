@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Storefront — Featured Products</title>
+  <title>Yamaha 660 Single-Carb Conversion Intake Manifolds</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,24 +13,51 @@
     }
 
     body {
-      background-color: #f8f9fa;
-      color: #212529;
-      padding: 2rem;
+      background-color: #f4f5f7;
+      color: #1f2937;
+      padding: 2rem 1.25rem;
+      line-height: 1.5;
     }
 
     header {
+      max-width: 1100px;
+      margin: 0 auto 2rem auto;
       text-align: center;
-      margin-bottom: 2.5rem;
     }
 
     header h1 {
       font-size: 2rem;
+      color: #111827;
       margin-bottom: 0.5rem;
+    }
+
+    header .subtitle {
+      font-size: 1.05rem;
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+    }
+
+    .fitment-notice {
+      background-color: #ffffff;
+      border-left: 4px solid #d97706;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      font-size: 0.92rem;
+    }
+
+    .fitment-notice strong {
+      color: #111827;
+    }
+
+    .fitment-notice ul {
+      margin: 0.4rem 0 0.5rem 1.25rem;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
       gap: 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
@@ -38,7 +65,7 @@
 
     .product-card {
       background: #ffffff;
-      border: 1px solid #e9ecef;
+      border: 1px solid #e5e7eb;
       border-radius: 8px;
       overflow: hidden;
       display: flex;
@@ -55,7 +82,7 @@
       width: 100%;
       height: 210px;
       object-fit: cover;
-      background-color: #dee2e6;
+      background-color: #e5e7eb;
     }
 
     .product-info {
@@ -65,160 +92,215 @@
       flex-grow: 1;
     }
 
+    .badge-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    .badge-pa12 {
+      background-color: #e0e7ff;
+      color: #1e40af;
+    }
+
+    .badge-alu {
+      background-color: #e5e7eb;
+      color: #1f2937;
+    }
+
     .product-info h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+      color: #111827;
       margin-bottom: 0.5rem;
     }
 
     .description {
-      font-size: 0.95rem;
-      color: #495057;
-      line-height: 1.45;
+      font-size: 0.92rem;
+      color: #4b5563;
       margin-bottom: 0.75rem;
     }
 
-    .extra-details {
-      font-size: 0.85rem;
-      color: #6c757d;
+    .specs {
+      font-size: 0.86rem;
+      color: #374151;
       margin-bottom: 1rem;
-      padding-left: 1.1rem;
+      padding-left: 1.15rem;
       flex-grow: 1;
     }
 
-    .extra-details li {
-      margin-bottom: 0.25rem;
+    .specs li {
+      margin-bottom: 0.3rem;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.9rem;
+      border-top: 1px solid #f3f4f6;
+      padding-top: 0.85rem;
     }
 
     .price {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      color: #111;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #111827;
     }
 
-    /* PayPal Button Styling */
+    .shipping-tag {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
     .paypal-btn {
       display: block;
       text-align: center;
       text-decoration: none;
       background-color: #ffc439;
       color: #111111;
-      font-weight: bold;
-      padding: 0.7rem 1rem;
-      border-radius: 5px;
-      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.98rem;
       transition: background-color 0.2s ease;
     }
 
     .paypal-btn:hover {
       background-color: #f2ba36;
     }
+
+    footer {
+      max-width: 1100px;
+      margin: 2.5rem auto 0 auto;
+      padding-top: 1.25rem;
+      border-top: 1px solid #d1d5db;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Our Featured Products</h1>
-    <p>Quality everyday essentials delivered to your door.</p>
+    <h1>Yamaha 660 Single-Carb Intake Manifolds</h1>
+    <p class="subtitle">Industrial 3D-printed 2-into-1 conversion manifolds for the 5-valve Yamaha 660 single-cylinder engine.</p>
+
+    <div class="fitment-notice">
+      <strong>Vehicle Compatibility — Please Check Before Ordering:</strong>
+      <ul>
+        <li><strong>Fits ONLY:</strong> Yamaha SZR 660, MuZ 660 Skorpion (Sport / Tour / Replica road models), and Yamaha Raptor 660 (YFM660R).</li>
+        <li><strong>Does NOT fit:</strong> Off-road / Supermoto frame variants (MuZ Baghira, MuZ Mastiff, Yamaha XTZ 660 Tenere) due to frame/shock clearance.</li>
+      </ul>
+      <strong>Shipping:</strong> €20 flat rate within the EU | €40 flat rate outside the EU (calculated automatically at PayPal checkout).
+    </div>
   </header>
 
   <main class="product-grid">
-    <!-- Product 1 -->
+
+    <!-- TYPE 1: FCR 39/41 - PA12 -->
     <article class="product-card">
-      <img src="images/product1.jpg" alt="Wireless Headphones">
+      <img src="images/fcr-pa12.jpg" alt="FCR 39/41 Intake Manifold in HP MJF PA12">
       <div class="product-info">
-        <h2>Wireless Headphones</h2>
-        <p class="description">Over-ear headphones engineered for deep bass and crystal-clear calls during travel or work.</p>
-        <ul class="extra-details">
-          <li>Active noise cancellation</li>
-          <li>30-hour battery life + USB-C fast charge</li>
-          <li>Includes hard carrying case</li>
+        <div class="badge-row">
+          <span class="badge badge-pa12">HP MJF PA12</span>
+        </div>
+        <h2>Single-Carb Manifold — FCR 39 / 41 (PA12)</h2>
+        <p class="description">Lightweight, thermally insulating HP Multi Jet Fusion intake manifold engineered to adapt a single Keihin FCR carburetor to the dual-port 660 head.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Keihin FCR 39mm &amp; FCR 41mm</li>
+          <li><strong>Material:</strong> HP MJF 3D-printed PA12 nylon (isotropic, fuel &amp; heat resistant, reduces heat soak)</li>
+          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
         </ul>
-        <div class="price">$129.00</div>
+        <div class="price-row">
+          <span class="price">€149.00</span>
+          <span class="shipping-tag">+ €20 EU / €40 World</span>
+        </div>
         <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
-    <!-- Product 2 -->
+    <!-- TYPE 1: FCR 39/41 - ALUMINUM -->
     <article class="product-card">
-      <img src="images/product2.jpg" alt="Minimalist Watch">
+      <img src="images/fcr-alu.jpg" alt="FCR 39/41 Intake Manifold in 3D-Printed Aluminum">
       <div class="product-info">
-        <h2>Minimalist Watch</h2>
-        <p class="description">A timeless everyday timepiece featuring a scratch-resistant sapphire crystal face.</p>
-        <ul class="extra-details">
-          <li>40mm brushed stainless steel case</li>
-          <li>Genuine Italian leather strap</li>
-          <li>Water-resistant up to 50 meters</li>
+        <div class="badge-row">
+          <span class="badge badge-alu">3D-Printed Aluminum</span>
+        </div>
+        <h2>Single-Carb Manifold — FCR 39 / 41 (Aluminum)</h2>
+        <p class="description">Rigid metal 3D-printed intake manifold with smooth internal runner transitions for converting the Yamaha 660 to a single Keihin FCR carburetor.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Keihin FCR 39mm &amp; FCR 41mm</li>
+          <li><strong>Material:</strong> Industrial 3D-printed Aluminum (DMLS/SLM metal additive)</li>
+          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
         </ul>
-        <div class="price">$89.00</div>
+        <div class="price-row">
+          <span class="price">€189.00</span>
+          <span class="shipping-tag">+ €20 EU / €40 World</span>
+        </div>
         <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
-    <!-- Product 3 -->
+    <!-- TYPE 2: TM40/42 & DELLORTO - PA12 -->
     <article class="product-card">
-      <img src="images/product3.jpg" alt="Ceramic Coffee Mug">
+      <img src="images/tm40-pa12.jpg" alt="TM40/42 Dellorto 40/41 Malossi 41 Manifold in HP MJF PA12">
       <div class="product-info">
-        <h2>Ceramic Coffee Mug</h2>
-        <p class="description">Hand-thrown stoneware mug with a speckled matte glaze and comfortable wide handle.</p>
-        <ul class="extra-details">
-          <li>12 oz (350 ml) capacity</li>
-          <li>Dishwasher and microwave safe</li>
-          <li>Thick walls for heat retention</li>
+        <div class="badge-row">
+          <span class="badge badge-pa12">HP MJF PA12</span>
+        </div>
+        <h2>Single-Carb Manifold — TM40/42 &amp; Dell'Orto 40/41 (PA12)</h2>
+        <p class="description">Thermally insulating HP Multi Jet Fusion 2-into-1 conversion manifold sized for mid-bore Mikuni, Dell'Orto, and Malossi single carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41</li>
+          <li><strong>Material:</strong> HP MJF 3D-printed PA12 nylon (isotropic, fuel &amp; heat resistant)</li>
+          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
         </ul>
-        <div class="price">$24.00</div>
+        <div class="price-row">
+          <span class="price">€149.00</span>
+          <span class="shipping-tag">+ €20 EU / €40 World</span>
+        </div>
         <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
-    <!-- Product 4 -->
+    <!-- TYPE 2: TM40/42 & DELLORTO - ALUMINUM -->
     <article class="product-card">
-      <img src="images/product4.jpg" alt="Canvas Backpack">
+      <img src="images/tm40-alu.jpg" alt="TM40/42 Dellorto 40/41 Malossi 41 Manifold in 3D-Printed Aluminum">
       <div class="product-info">
-        <h2>Canvas Backpack</h2>
-        <p class="description">Weather-resistant commuter bag built with heavy-duty waxed canvas and brass hardware.</p>
-        <ul class="extra-details">
-          <li>Padded sleeve fits up to 15" laptops</li>
-          <li>Hidden anti-theft back pocket</li>
-          <li>20-liter main compartment</li>
+        <div class="badge-row">
+          <span class="badge badge-alu">3D-Printed Aluminum</span>
+        </div>
+        <h2>Single-Carb Manifold — TM40/42 &amp; Dell'Orto 40/41 (Aluminum)</h2>
+        <p class="description">Heavy-duty 3D-printed metal 2-into-1 conversion manifold built for mid-bore Mikuni, Dell'Orto, and Malossi single carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41</li>
+          <li><strong>Material:</strong> Industrial 3D-printed Aluminum (DMLS/SLM metal additive)</li>
+          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
         </ul>
-        <div class="price">$65.00</div>
+        <div class="price-row">
+          <span class="price">€189.00</span>
+          <span class="shipping-tag">+ €20 EU / €40 World</span>
+        </div>
         <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
-    <!-- Product 5 -->
+    <!-- TYPE 3: TM45/48 & HSR45/48 - PA12 -->
     <article class="product-card">
-      <img src="images/product5.jpg" alt="Mechanical Keyboard">
+      <img src="images/tm45-pa12.jpg" alt="TM45/48 HSR45/48 Intake Manifold in HP MJF PA12">
       <div class="product-info">
-        <h2>Mechanical Keyboard</h2>
-        <p class="description">Compact 75% wireless keyboard designed for fast, comfortable typing across multiple devices.</p>
-        <ul class="extra-details">
-          <li>Hot-swappable tactile brown switches</li>
-          <li>Connects via Bluetooth 5.1 or USB-C</li>
-          <li>Compatible with Windows & macOS</li>
-        </ul>
-        <div class="price">$110.00</div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
-      </div>
-    </article>
+        <div class="badge-row">
+          <span class="badge badge-pa12">HP MJF PA12</span>
+        </div>
 
-    <!-- Product 6 -->
-    <article class="product-card">
-      <img src="images/product6.jpg" alt="Desk Lamp">
-      <div class="product-info">
-        <h2>LED Desk Lamp</h2>
-        <p class="description">Sleek anodized aluminum task lamp that reduces eye strain during late-night work sessions.</p>
-        <ul class="extra-details">
-          <li>5 brightness levels & 3 color modes</li>
-          <li>180-degree adjustable swing arm</li>
-          <li>Built-in USB charging port on base</li>
-        </ul>
-        <div class="price">$45.00</div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
-      </div>
-    </article>
-  </main>
-
-</body>
-</html>
