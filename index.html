@@ -41,7 +41,8 @@
     .tag { align-self: flex-start; font-size: .7rem; font-weight: 800; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-bottom: 10px; }
     .pa12 .tag { background: rgba(255,230,0,.16); color: var(--yellow); }
     .alu .tag { background: rgba(255,46,147,.16); color: #ff77b7; }
-    .photo { aspect-ratio: 16 / 10; background: var(--surface-alt); border: 1px dashed var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .8rem; margin-bottom: 12px; padding: 8px; text-align: center; }
+    .photo { aspect-ratio: 16 / 10; background: var(--surface-alt); border: 1px dashed var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .8rem; margin-bottom: 12px; padding: 8px; text-align: center; overflow: hidden; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 7px; }
     .card h2 { font-size: 1.15rem; margin-bottom: 3px; }
     .desc { font-size: .84rem; color: var(--muted); margin-bottom: 10px; }
     .price { font-size: 1.7rem; font-weight: 800; color: var(--yellow); margin-bottom: 12px; }
@@ -96,7 +97,145 @@
       <button class="fbtn" onclick="filterCards('alu', this)">3D Aluminum — &euro;219 (3)</button>
     </div>
 
-    <section class="grid" id="cards"></section>
+    <section class="grid" id="cards">
+      <!-- 1. PA12 FCR -->
+      <article class="card pa12" data-type="pa12">
+        <span class="tag">MJF PA12</span>
+        <div class="photo">[Photo: ./images/pa12-fcr.jpg]</div>
+        <h2>Single-Carb PA12 — FCR 39 / 41</h2>
+        <p class="desc">For Keihin FCR-MX 39mm &amp; 41mm</p>
+        <div class="price">&euro;99 <span>(~$109 + ship)</span></div>
+        <div class="boot"><strong>Rubber Boot Not Included:</strong>Yamaha WR450F / YZ450F spigot boot (e.g., Tourmax CHY-62 / OEM 5TA-13597-00) — confirm exact part #.</div>
+        <ul class="specs">
+          <li>Pressed metal crush sleeves + thermal insulator</li>
+          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
+        </ul>
+        <div class="buy">
+          <label for="s-pa12_fcr">Shipping Destination</label>
+          <select id="s-pa12_fcr" onchange="upd('pa12_fcr', 99)">
+            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
+            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
+          </select>
+          <div class="tot"><span>Total (EUR):</span><strong id="t-pa12_fcr">&euro;119</strong></div>
+          <button class="btn" onclick="go('pa12_fcr')">Buy with PayPal / Card</button>
+        </div>
+      </article>
+
+      <!-- 2. PA12 TM -->
+      <article class="card pa12" data-type="pa12">
+        <span class="tag">MJF PA12</span>
+        <div class="photo">[Photo: ./images/pa12-tm.jpg]</div>
+        <h2>Single-Carb PA12 — TM 40 / 42</h2>
+        <p class="desc">For Mikuni TM40-6 &amp; TM42-6</p>
+        <div class="price">&euro;99 <span>(~$109 + ship)</span></div>
+        <div class="boot"><strong>Rubber Boot Not Included:</strong>44–46mm ID bolt-on flange boot (e.g., Mikuni M-VM40-200 / KTM LC4) — confirm exact part #.</div>
+        <ul class="specs">
+          <li>Pressed metal crush sleeves + thermal insulator</li>
+          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
+        </ul>
+        <div class="buy">
+          <label for="s-pa12_tm">Shipping Destination</label>
+          <select id="s-pa12_tm" onchange="upd('pa12_tm', 99)">
+            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
+            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
+          </select>
+          <div class="tot"><span>Total (EUR):</span><strong id="t-pa12_tm">&euro;119</strong></div>
+          <button class="btn" onclick="go('pa12_tm')">Buy with PayPal / Card</button>
+        </div>
+      </article>
+
+      <!-- 3. PA12 HSR -->
+      <article class="card pa12" data-type="pa12">
+        <span class="tag">MJF PA12</span>
+        <div class="photo">[Photo: ./images/pa12-hsr.jpg]</div>
+        <h2>Single-Carb PA12 — HSR 45 / 48</h2>
+        <p class="desc">For Mikuni HSR45 &amp; HSR48</p>
+        <div class="price">&euro;99 <span>(~$109 + ship)</span></div>
+        <div class="boot"><strong>Rubber Boot Not Included:</strong>Mikuni HSR45/48 flange adapter (e.g., Mikuni HS42/018-45) — confirm exact part #.</div>
+        <ul class="specs">
+          <li>Pressed metal crush sleeves + thermal insulator</li>
+          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
+        </ul>
+        <div class="buy">
+          <label for="s-pa12_hsr">Shipping Destination</label>
+          <select id="s-pa12_hsr" onchange="upd('pa12_hsr', 99)">
+            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
+            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
+          </select>
+          <div class="tot"><span>Total (EUR):</span><strong id="t-pa12_hsr">&euro;119</strong></div>
+          <button class="btn" onclick="go('pa12_hsr')">Buy with PayPal / Card</button>
+        </div>
+      </article>
+
+      <!-- 4. ALU FCR -->
+      <article class="card alu" data-type="alu">
+        <span class="tag">3D Aluminum</span>
+        <div class="photo">[Photo: ./images/alu-fcr.jpg]</div>
+        <h2>Single-Carb 3D Alu — FCR 39 / 41</h2>
+        <p class="desc">DMLS AlSi10Mg &bull; For Keihin FCR 39 / 41</p>
+        <div class="price">&euro;219 <span>(~$240 + ship)</span></div>
+        <div class="boot"><strong>Rubber Boot Not Included:</strong>Yamaha WR450F / YZ450F spigot boot (e.g., Tourmax CHY-62 / OEM 5TA-13597-00) — confirm exact part #.</div>
+        <ul class="specs">
+          <li>DMLS sintered AlSi10Mg + 30 min hand finish in Sweden</li>
+          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
+        </ul>
+        <div class="buy">
+          <label for="s-alu_fcr">Shipping Destination</label>
+          <select id="s-alu_fcr" onchange="upd('alu_fcr', 219)">
+            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
+            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
+          </select>
+          <div class="tot"><span>Total (EUR):</span><strong id="t-alu_fcr">&euro;239</strong></div>
+          <button class="btn" onclick="go('alu_fcr')">Buy with PayPal / Card</button>
+        </div>
+      </article>
+
+      <!-- 5. ALU TM -->
+      <article class="card alu" data-type="alu">
+        <span class="tag">3D Aluminum</span>
+        <div class="photo">[Photo: ./images/alu-tm.jpg]</div>
+        <h2>Single-Carb 3D Alu — TM 40 / 42</h2>
+        <p class="desc">DMLS AlSi10Mg &bull; For Mikuni TM40-6 / TM42-6</p>
+        <div class="price">&euro;219 <span>(~$240 + ship)</span></div>
+        <div class="boot"><strong>Rubber Boot Not Included:</strong>44–46mm ID bolt-on flange boot (e.g., Mikuni M-VM40-200 / KTM LC4) — confirm exact part #.</div>
+        <ul class="specs">
+          <li>DMLS sintered AlSi10Mg + 30 min hand finish in Sweden</li>
+          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
+        </ul>
+        <div class="buy">
+          <label for="s-alu_tm">Shipping Destination</label>
+          <select id="s-alu_tm" onchange="upd('alu_tm', 219)">
+            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
+            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
+          </select>
+          <div class="tot"><span>Total (EUR):</span><strong id="t-alu_tm">&euro;239</strong></div>
+          <button class="btn" onclick="go('alu_tm')">Buy with PayPal / Card</button>
+        </div>
+      </article>
+
+      <!-- 6. ALU HSR -->
+      <article class="card alu" data-type="alu">
+        <span class="tag">3D Aluminum</span>
+        <div class="photo">[Photo: ./images/alu-hsr.jpg]</div>
+        <h2>Single-Carb 3D Alu — HSR 45 / 48</h2>
+        <p class="desc">DMLS AlSi10Mg &bull; For Mikuni HSR45 / HSR48</p>
+        <div class="price">&euro;219 <span>(~$240 + ship)</span></div>
+        <div class="boot"><strong>Rubber Boot Not Included:</strong>Mikuni HSR45/48 flange adapter (e.g., Mikuni HS42/018-45) — confirm exact part #.</div>
+        <ul class="specs">
+          <li>DMLS sintered AlSi10Mg + 30 min hand finish in Sweden</li>
+          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
+        </ul>
+        <div class="buy">
+          <label for="s-alu_hsr">Shipping Destination</label>
+          <select id="s-alu_hsr" onchange="upd('alu_hsr', 219)">
+            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
+            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
+          </select>
+          <div class="tot"><span>Total (EUR):</span><strong id="t-alu_hsr">&euro;239</strong></div>
+          <button class="btn" onclick="go('alu_hsr')">Buy with PayPal / Card</button>
+        </div>
+      </article>
+    </section>
 
     <section class="info">
       <div class="box">
@@ -131,39 +270,6 @@
       alu_hsr_WORLD: "https://www.paypal.com/ncp/payment/REPLACE_ALU_HSR_WORLD_259"
     };
 
-    const PRODUCTS = [
-      { id: "pa12_fcr", type: "pa12", badge: "MJF PA12", title: "Single-Carb PA12 — FCR 39 / 41", desc: "For Keihin FCR-MX 39mm & 41mm", price: 99, usd: "~$109", photo: "./images/pa12-fcr.jpg", boot: "Yamaha WR450F / YZ450F spigot boot (e.g., Tourmax CHY-62 / OEM 5TA-13597-00) — confirm exact part #.", extra: "Pressed metal crush sleeves + thermal insulator" },
-      { id: "pa12_tm", type: "pa12", badge: "MJF PA12", title: "Single-Carb PA12 — TM 40 / 42", desc: "For Mikuni TM40-6 & TM42-6", price: 99, usd: "~$109", photo: "./images/pa12-tm.jpg", boot: "44–46mm ID bolt-on flange boot (e.g., Mikuni M-VM40-200 / KTM LC4) — confirm exact part #.", extra: "Pressed metal crush sleeves + thermal insulator" },
-      { id: "pa12_hsr", type: "pa12", badge: "MJF PA12", title: "Single-Carb PA12 — HSR 45 / 48", desc: "For Mikuni HSR45 & HSR48", price: 99, usd: "~$109", photo: "./images/pa12-hsr.jpg", boot: "Mikuni HSR45/48 flange adapter (e.g., Mikuni HS42/018-45) — confirm exact part #.", extra: "Pressed metal crush sleeves + thermal insulator" },
-      { id: "alu_fcr", type: "alu", badge: "3D Aluminum", title: "Single-Carb 3D Alu — FCR 39 / 41", desc: "DMLS AlSi10Mg • For Keihin FCR 39 / 41", price: 219, usd: "~$240", photo: "./images/alu-fcr.jpg", boot: "Yamaha WR450F / YZ450F spigot boot (e.g., Tourmax CHY-62 / OEM 5TA-13597-00) — confirm exact part #.", extra: "DMLS sintered AlSi10Mg + 30 min hand finish in Sweden" },
-      { id: "alu_tm", type: "alu", badge: "3D Aluminum", title: "Single-Carb 3D Alu — TM 40 / 42", desc: "DMLS AlSi10Mg • For Mikuni TM40-6 / TM42-6", price: 219, usd: "~$240", photo: "./images/alu-tm.jpg", boot: "44–46mm ID bolt-on flange boot (e.g., Mikuni M-VM40-200 / KTM LC4) — confirm exact part #.", extra: "DMLS sintered AlSi10Mg + 30 min hand finish in Sweden" },
-      { id: "alu_hsr", type: "alu", badge: "3D Aluminum", title: "Single-Carb 3D Alu — HSR 45 / 48", desc: "DMLS AlSi10Mg • For Mikuni HSR45 / HSR48", price: 219, usd: "~$240", photo: "./images/alu-hsr.jpg", boot: "Mikuni HSR45/48 flange adapter (e.g., Mikuni HS42/018-45) — confirm exact part #.", extra: "DMLS sintered AlSi10Mg + 30 min hand finish in Sweden" }
-    ];
-
-    document.getElementById("cards").innerHTML = PRODUCTS.map(p => \\\`
-      <article class="card ${p.type}" data-type="${p.type}">
-        <span class="tag">${p.badge}</span>
-        <div class="photo">[Photo: ${p.photo}]</div>
-        <h2>${p.title}</h2>
-        <p class="desc">${p.desc}</p>
-        <div class="price">&euro;${p.price} <span>(${p.usd} + ship)</span></div>
-        <div class="boot"><strong>Rubber Boot Not Included:</strong>${p.boot}</div>
-        <ul class="specs">
-          <li>${p.extra}</li>
-          <li>Serialized manifold, Viton O-rings &amp; 2&times; Garage83 stickers</li>
-        </ul>
-        <div class="buy">
-          <label for="s-${p.id}">Shipping Destination</label>
-          <select id="s-${p.id}" onchange="upd('${p.id}', ${p.price})">
-            <option value="20" data-z="EU">EU Tracked PostNord — &euro;20</option>
-            <option value="40" data-z="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
-          </select>
-          <div class="tot"><span>Total (EUR):</span><strong id="t-${p.id}">&euro;${p.price + 20}</strong></div>
-          <button class="btn" onclick="go('${p.id}')">Buy with PayPal / Card</button>
-        </div>
-      </article>
-    \\\`).join("");
-
     function filterCards(type, btn) {
       document.querySelectorAll(".fbtn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
@@ -192,3 +298,4 @@
 </body>
 </html>
 
+Yahoo Mail: Sök, organisera, segra
