@@ -3,23 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>660 Single-Carb Intake Manifolds | Raptor 660, SZR660, MuZ Skorpion 660</title>
+  <title>GARAGE83 | Super Single Power Bomb — 660 Intake Manifolds</title>
   <style>
     :root {
-      --bg: #0f1115;
-      --surface: #171a21;
-      --surface-alt: #1f242e;
-      --border: #2c3340;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --accent: #f59e0b;
-      --green: #10b981;
-      --red-bg: rgba(239, 68, 68, 0.1);
-      --red-border: rgba(239, 68, 68, 0.35);
-      --boot-bg: rgba(245, 158, 11, 0.1);
-      --boot-border: rgba(245, 158, 11, 0.35);
-      --paypal: #ffc439;
-      --paypal-hover: #f4b41a;
+      --bg: #110d1d;
+      --surface: #1a142b;
+      --surface-alt: #241b3c;
+      --border: #3a2b5e;
+      --text: #faf5ff;
+      --muted: #c4b5fd;
+      --yellow: #ffe600;
+      --yellow-hover: #facc15;
+      --pink: #ff2e93;
+      --purple: #7c3aed;
+      --mint: #2dd4bf;
+      --red-bg: rgba(255, 46, 147, 0.14);
+      --red-border: rgba(255, 46, 147, 0.45);
+      --boot-bg: rgba(255, 230, 0, 0.1);
+      --boot-border: rgba(255, 230, 0, 0.42);
+      --paypal: #ffe600;
+      --paypal-hover: #facc15;
     }
 
     * {
@@ -36,6 +39,13 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* 90s Sportbike Racing Stripe Bar */
+    .racing-stripe {
+      height: 7px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--purple) 0%, var(--purple) 34%, var(--pink) 34%, var(--pink) 68%, var(--yellow) 68%, var(--yellow) 100%);
+    }
+
     .container {
       width: 100%;
       max-width: 1120px;
@@ -46,8 +56,10 @@
     /* Header */
     header {
       border-bottom: 1px solid var(--border);
-      padding: 26px 0 32px;
-      background: radial-gradient(circle at top right, #1e2533 0%, var(--bg) 65%);
+      padding: 24px 0 32px;
+      background:
+        linear-gradient(125deg, rgba(124, 58, 237, 0.24) 0%, rgba(255, 46, 147, 0.14) 52%, rgba(255, 230, 0, 0.08) 100%),
+        var(--bg);
     }
 
     .brand-bar {
@@ -56,31 +68,58 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 20px;
-      font-size: 0.88rem;
-      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .brand-name {
-      font-weight: 700;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      color: var(--yellow);
+      text-shadow: 2px 2px 0px var(--pink);
+    }
+
+    .sticker-tag {
+      background: linear-gradient(90deg, var(--yellow), var(--pink));
+      color: #140b24;
+      font-weight: 900;
+      font-size: 0.72rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--text);
+      padding: 3px 10px;
+      border-radius: 3px;
+      transform: skewX(-10deg);
     }
 
     .badge-origin {
       background: var(--surface-alt);
       border: 1px solid var(--border);
-      padding: 4px 10px;
+      color: var(--muted);
+      padding: 4px 11px;
       border-radius: 999px;
       font-size: 0.8rem;
     }
 
     h1 {
-      font-size: clamp(1.65rem, 3.8vw, 2.4rem);
-      line-height: 1.2;
+      font-size: clamp(1.7rem, 3.8vw, 2.45rem);
+      line-height: 1.15;
       margin-bottom: 10px;
       letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    h1 span.accent-pink {
+      color: var(--pink);
     }
 
     .subtitle {
@@ -98,9 +137,9 @@
     }
 
     .pill-fit {
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      color: #6ee7b7;
+      background: rgba(45, 212, 191, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.4);
+      color: #99f6e4;
       padding: 5px 11px;
       border-radius: 6px;
       font-size: 0.84rem;
@@ -111,10 +150,14 @@
       display: inline-block;
       background: var(--red-bg);
       border: 1px solid var(--red-border);
-      color: #fca5a5;
-      padding: 6px 12px;
+      color: #fbcfe8;
+      padding: 7px 12px;
       border-radius: 6px;
       font-size: 0.85rem;
+    }
+
+    .fitment-exclude strong {
+      color: #ff77b7;
     }
 
     /* Filter Bar */
@@ -132,15 +175,20 @@
       padding: 9px 15px;
       border-radius: 8px;
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.15s ease;
     }
 
-    .filter-btn.active,
-    .filter-btn:hover {
+    .filter-btn.active {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: #140b24;
+    }
+
+    .filter-btn:hover:not(.active) {
       background: var(--surface-alt);
-      border-color: var(--accent);
+      border-color: var(--pink);
       color: var(--text);
     }
 
@@ -175,11 +223,12 @@
     }
 
     .card.pa12-card {
-      border-top: 3px solid var(--accent);
+      border-top: 4px solid var(--yellow);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
 
     .card.alu-card {
-      border-top: 3px solid #64748b;
+      border-top: 4px solid var(--pink);
     }
 
     .card.hidden {
@@ -199,13 +248,15 @@
     }
 
     .mat-badge.pa12 {
-      background: rgba(245, 158, 11, 0.18);
-      color: #fbbf24;
+      background: rgba(255, 230, 0, 0.16);
+      color: var(--yellow);
+      border: 1px solid rgba(255, 230, 0, 0.35);
     }
 
     .mat-badge.alu {
-      background: rgba(148, 163, 184, 0.18);
-      color: #cbd5e1;
+      background: rgba(255, 46, 147, 0.16);
+      color: #ff77b7;
+      border: 1px solid rgba(255, 46, 147, 0.35);
     }
 
     .img-placeholder {
@@ -236,6 +287,7 @@
       font-size: 1.18rem;
       line-height: 1.3;
       margin-bottom: 4px;
+      color: #ffffff;
     }
 
     .carb-sub {
@@ -254,7 +306,7 @@
     .price-eur {
       font-size: 1.75rem;
       font-weight: 800;
-      color: var(--text);
+      color: var(--yellow);
     }
 
     .price-usd {
@@ -270,16 +322,16 @@
       padding: 10px 12px;
       font-size: 0.84rem;
       margin-bottom: 14px;
-      color: #fde68a;
+      color: #fef08a;
     }
 
     .boot-box strong {
       display: block;
-      color: #fbbf24;
+      color: var(--yellow);
       margin-bottom: 2px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
     }
 
     .specs-list {
@@ -287,12 +339,12 @@
       margin-bottom: 18px;
       flex-grow: 1;
       font-size: 0.88rem;
-      color: #d1d5db;
+      color: #e9d5ff;
     }
 
     .specs-list li {
       padding: 5px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(196, 181, 253, 0.12);
     }
 
     .specs-list li:last-child {
@@ -333,6 +385,11 @@
       cursor: pointer;
     }
 
+    select:focus {
+      outline: none;
+      border-color: var(--yellow);
+    }
+
     .total-line {
       display: flex;
       justify-content: space-between;
@@ -345,7 +402,7 @@
     .total-amount {
       font-size: 1.15rem;
       font-weight: 800;
-      color: var(--green);
+      color: var(--mint);
     }
 
     .btn-paypal {
@@ -353,8 +410,8 @@
       width: 100%;
       text-align: center;
       background: var(--paypal);
-      color: #111827;
-      font-weight: 800;
+      color: #140b24;
+      font-weight: 900;
       font-size: 0.95rem;
       padding: 12px 14px;
       border-radius: 6px;
@@ -375,6 +432,7 @@
     .section h3 {
       font-size: 1.2rem;
       margin-bottom: 12px;
+      color: #ffffff;
     }
 
     .table-wrap {
@@ -398,8 +456,8 @@
 
     th {
       background: var(--surface-alt);
-      color: var(--muted);
-      font-weight: 700;
+      color: var(--yellow);
+      font-weight: 800;
       text-transform: uppercase;
       font-size: 0.76rem;
     }
@@ -427,13 +485,19 @@
       border-radius: 10px;
       padding: 16px;
       font-size: 0.9rem;
-      color: #d1d5db;
+      color: #e9d5ff;
     }
 
     .info-card h4 {
-      color: var(--text);
+      color: var(--yellow);
       margin-bottom: 6px;
       font-size: 0.98rem;
+    }
+
+    .info-card a {
+      color: var(--pink);
+      text-decoration: none;
+      font-weight: 600;
     }
 
     footer {
@@ -445,22 +509,28 @@
     }
 
     footer a {
-      color: var(--accent);
+      color: var(--pink);
       text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
+  <div class="racing-stripe"></div>
+
   <header>
     <div class="container">
       <div class="brand-bar">
-        <span class="brand-name">YOUR BRAND NAME</span>
-        <span class="badge-origin">Engineered in Sweden &bull; Worldwide Tracked Shipping</span>
+        <div class="brand-cluster">
+          <span class="brand-name">GARAGE83</span>
+          <span class="sticker-tag">Super Single Power Bomb</span>
+        </div>
+        <span class="badge-origin">Sweden &bull; Tracked EU &amp; Worldwide Shipping</span>
       </div>
-      <h1>2-into-1 Single Carburetor Intake Manifolds</h1>
+      <h1>2-into-1 Single Carburetor <span class="accent-pink">Intake Manifolds</span></h1>
       <p class="subtitle">
-        Convert finicky dual-carburetor Yamaha 660 5-valve engines to a single flat-slide carburetor. Additively manufactured with a smooth continuous 2-into-1 collector.
+        Ditch dual-carburetor sync headaches on Yamaha 660 5-valve singles. Engineered with a smooth continuous 2-into-1 collector for flat-slide performance carburetors.
       </p>
       <div class="fitment-row">
         <span class="pill-fit">&check; Yamaha Raptor 660R (2001–2005)</span>
@@ -499,9 +569,9 @@
           Uses standard Yamaha WR450F / YZ450F spigot rubber boot (e.g., Tourmax CHY-62 / OEM 5TA-13597-00) — edit exact part # here.
         </div>
         <ul class="specs-list">
-          <li><strong>Thermal Insulator:</strong> Prevents fuel heat-soak from the cylinder head.</li>
+          <li><strong>Thermal Insulator:</strong> Blocks cylinder head heat soak for cooler fuel &amp; denser charge.</li>
           <li><strong>Italian HP MJF PA12:</strong> Fuel/E85 impervious, 175&deg;C heat deflection, ultra-light.</li>
-          <li><strong>Included:</strong> Serialized manifold, metal crush sleeves, Viton O-rings &amp; 2&times; decals.</li>
+          <li><strong>Included:</strong> Serialized manifold, metal crush sleeves, Viton O-rings &amp; 2&times; Garage83 stickers.</li>
         </ul>
         <div class="order-controls">
           <div class="field">
@@ -534,9 +604,9 @@
           Uses standard 44–46mm ID bolt-on flange rubber boot (e.g., Mikuni M-VM40-200 / KTM LC4 boot) — edit exact part # here.
         </div>
         <ul class="specs-list">
-          <li><strong>Thermal Insulator:</strong> Prevents fuel heat-soak from the cylinder head.</li>
+          <li><strong>Thermal Insulator:</strong> Blocks cylinder head heat soak for cooler fuel &amp; denser charge.</li>
           <li><strong>Italian HP MJF PA12:</strong> Fuel/E85 impervious, 175&deg;C heat deflection, ultra-light.</li>
-          <li><strong>Included:</strong> Serialized manifold, metal crush sleeves, Viton O-rings &amp; 2&times; decals.</li>
+          <li><strong>Included:</strong> Serialized manifold, metal crush sleeves, Viton O-rings &amp; 2&times; Garage83 stickers.</li>
         </ul>
         <div class="order-controls">
           <div class="field">
@@ -569,9 +639,9 @@
           Uses standard Mikuni HSR45/48 bolt-on rubber flange adapter (e.g., Mikuni HS42/018-45) — edit exact part # here.
         </div>
         <ul class="specs-list">
-          <li><strong>Thermal Insulator:</strong> Prevents fuel heat-soak from the cylinder head.</li>
+          <li><strong>Thermal Insulator:</strong> Blocks cylinder head heat soak for cooler fuel &amp; denser charge.</li>
           <li><strong>Italian HP MJF PA12:</strong> Fuel/E85 impervious, 175&deg;C heat deflection, ultra-light.</li>
-          <li><strong>Included:</strong> Serialized manifold, metal crush sleeves, Viton O-rings &amp; 2&times; decals.</li>
+          <li><strong>Included:</strong> Serialized manifold, metal crush sleeves, Viton O-rings &amp; 2&times; Garage83 stickers.</li>
         </ul>
         <div class="order-controls">
           <div class="field">
@@ -606,7 +676,7 @@
         <ul class="specs-list">
           <li><strong>Laser-Sintered AlSi10Mg:</strong> True continuous internal 2-into-1 lofting impossible with CNC.</li>
           <li><strong>Hand-Finished in Sweden:</strong> 30 min manual port blending &amp; flange surfacing.</li>
-          <li><strong>Included:</strong> Serialized metal manifold, Viton O-rings &amp; 2&times; decals.</li>
+          <li><strong>Included:</strong> Serialized metal manifold, Viton O-rings &amp; 2&times; Garage83 stickers.</li>
         </ul>
         <div class="order-controls">
           <div class="field">
@@ -615,37 +685,5 @@
               <option value="20" data-zone="EU">EU Tracked PostNord — &euro;20</option>
               <option value="40" data-zone="WORLD">USA &amp; Worldwide Tracked — &euro;40</option>
             </select>
-          </div>
-          <div class="total-line">
-            <span>Total (EUR):</span>
-            <span class="total-amount" id="total-alu-fcr">&euro;239</span>
-          </div>
-          <button class="btn-paypal" onclick="checkout('alu_fcr')">Buy with PayPal / Card</button>
-        </div>
-      </article>
-
-      <!-- 5. 3D ALUMINUM - MIKUNI TM 40 / 42 -->
-      <article class="card alu-card" data-type="alu">
-        <span class="mat-badge alu">Metal Edition &bull; 3D Aluminum</span>
-        <div class="img-placeholder">[Photo: ./images/alu-tm.jpg]</div>
-        <h2>3D Aluminum — Mikuni TM 40 / 42</h2>
-        <p class="carb-sub">DMLS AlSi10Mg Metal &bull; For Mikuni TM40-6 &amp; TM42-6</p>
-        <div class="price-row">
-          <span class="price-eur">&euro;219</span>
-          <span class="price-usd">(~$240 USD + ship)</span>
-        </div>
-        <div class="boot-box">
-          <strong>Rubber Boot Not Included — Required Part:</strong>
-          Uses standard 44–46mm ID bolt-on flange rubber boot (e.g., Mikuni M-VM40-200 / KTM LC4 boot) — edit exact part # here.
-        </div>
-        <ul class="specs-list">
-          <li><strong>Laser-Sintered AlSi10Mg:</strong> True continuous internal 2-into-1 lofting impossible with CNC.</li>
-          <li><strong>Hand-Finished in Sweden:</strong> 30 min manual port blending &amp; flange surfacing.</li>
-          <li><strong>Included:</strong> Serialized metal manifold, Viton O-rings &amp; 2&times; decals.</li>
-        </ul>
-        <div class="order-controls">
-          <div class="field">
-            <label for="ship-alu-tm">Shipping Destination</label>
-            <select id="ship-alu-tm" onchange="updateTotal('alu-tm', 219)">
-              <option value="20" data-zone="EU">EU Tracked PostNord — &euro;20</option>
-              <option value="40" data-zone="WORLD">USA &amp; Worldwide Tracked — &euro;40</opt
+          <
+Yahoo Mail: Sök, organisera, segra
