@@ -1,306 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yamaha 660 Single-Carb Conversion Intake Manifolds</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>660 Single-Carb Intake Manifolds | Raptor 660, SZR660, XTZ660, MuZ 660</title>
   <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #171a21;
+      --surface-alt: #1f242e;
+      --border: #2c3340;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --green: #10b981;
+      --warn-bg: rgba(245, 158, 11, 0.12);
+      --warn-border: rgba(245, 158, 11, 0.45);
+      --paypal: #ffc439;
+      --paypal-hover: #f4b41a;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     body {
-      background-color: #f4f5f7;
-      color: #1f2937;
-      padding: 2rem 1.25rem;
-      line-height: 1.5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    header {
-      max-width: 1100px;
-      margin: 0 auto 2rem auto;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      color: #111827;
-      margin-bottom: 0.5rem;
-    }
-
-    header .subtitle {
-      font-size: 1.05rem;
-      color: #4b5563;
-      margin-bottom: 1.25rem;
-    }
-
-    .fitment-notice {
-      background-color: #ffffff;
-      border-left: 4px solid #d97706;
-      border-radius: 6px;
-      padding: 1rem 1.25rem;
-      text-align: left;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-      font-size: 0.92rem;
-    }
-
-    .fitment-notice strong {
-      color: #111827;
-    }
-
-    .fitment-notice ul {
-      margin: 0.4rem 0 0.5rem 1.25rem;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .product-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .product-card img {
+    .container {
       width: 100%;
-      height: 210px;
-      object-fit: cover;
-      background-color: #e5e7eb;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 18px;
     }
 
-    .product-info {
-      padding: 1.25rem;
+    /* Header / Hero */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0 36px;
+      background: radial-gradient(circle at top right, #1e2533 0%, var(--bg) 65%);
+    }
+
+    .brand-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .badge-origin {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+
+    .fitment-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    /* Critical Callout Banner */
+    .notice-box {
+      margin: 26px 0;
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-size: 0.95rem;
+    }
+
+    .notice-box strong {
+      color: #fbbf24;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin: 28px 0 40px;
+    }
+
+    @media (max-width: 780px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      position: relative;
     }
 
-    .badge-row {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 0.6rem;
-      flex-wrap: wrap;
+    .card.featured {
+      border: 2px solid var(--accent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
-    .badge {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      padding: 0.2rem 0.55rem;
-      border-radius: 4px;
-    }
-
-    .badge-pa12 {
-      background-color: #e0e7ff;
-      color: #1e40af;
-    }
-
-    .badge-alu {
-      background-color: #e5e7eb;
-      color: #1f2937;
-    }
-
-    .product-info h2 {
-      font-size: 1.2rem;
+    .ribbon {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--accent);
       color: #111827;
-      margin-bottom: 0.5rem;
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
     }
 
-    .description {
-      font-size: 0.92rem;
-      color: #4b5563;
-      margin-bottom: 0.75rem;
+    .ribbon.secondary {
+      background: var(--surface-alt);
+      color: var(--muted);
+      border: 1px solid var(--border);
     }
 
-    .specs {
-      font-size: 0.86rem;
-      color: #374151;
-      margin-bottom: 1rem;
-      padding-left: 1.15rem;
-      flex-grow: 1;
+    .img-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--surface-alt);
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      margin: 8px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 12px;
+      overflow: hidden;
     }
 
-    .specs li {
-      margin-bottom: 0.3rem;
+    .img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      margin-bottom: 6px;
     }
 
     .price-row {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.9rem;
-      border-top: 1px solid #f3f4f6;
-      padding-top: 0.85rem;
+      gap: 10px;
+      margin: 10px 0 16px;
     }
 
-    .price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #111827;
+    .price-eur {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
     }
 
-    .shipping-tag {
-      font-size: 0.8rem;
-      color: #6b7280;
+    .price-usd {
+      font-size: 0.95rem;
+      color: var(--muted);
     }
 
-    .paypal-btn {
+    .specs-list {
+      list-style: none;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .specs-list li {
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.93rem;
+      color: #d1d5db;
+    }
+
+    .specs-list li:last-child {
+      border-bottom: none;
+    }
+
+    .specs-list strong {
+      color: var(--text);
+    }
+
+    /* Configurator Controls */
+    .order-controls {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: auto;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field label {
       display: block;
-      text-align: center;
-      text-decoration: none;
-      background-color: #ffc439;
-      color: #111111;
-      font-weight: 700;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      font-size: 0.98rem;
-      transition: background-color 0.2s ease;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .paypal-btn:hover {
-      background-color: #f2ba36;
+    select {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.95rem;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .total-amount {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .btn-paypal {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--paypal);
+      color: #111827;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 13px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .btn-paypal:hover {
+      background: var(--paypal-hover);
+    }
+
+    .checkout-sub {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* Comparison & Technical Notes */
+    .section {
+      margin: 42px 0;
+    }
+
+    .section h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--surface-alt);
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      font-size: 0.92rem;
+      color: #d1d5db;
+    }
+
+    .info-card h4 {
+      color: var(--text);
+      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     footer {
-      max-width: 1100px;
-      margin: 2.5rem auto 0 auto;
-      padding-top: 1.25rem;
-      border-top: 1px solid #d1d5db;
-      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 28px 0 44px;
+      margin-top: 48px;
       font-size: 0.85rem;
-      color: #6b7280;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Yamaha 660 Single-Carb Intake Manifolds</h1>
-    <p class="subtitle">Industrial 3D-printed 2-into-1 conversion manifolds for the 5-valve Yamaha 660 single-cylinder engine.</p>
-
-    <div class="fitment-notice">
-      <strong>Vehicle Compatibility — Please Check Before Ordering:</strong>
-      <ul>
-        <li><strong>Fits ONLY:</strong> Yamaha SZR 660, MuZ 660 Skorpion (Sport / Tour / Replica road models), and Yamaha Raptor 660 (YFM660R).</li>
-        <li><strong>Does NOT fit:</strong> Off-road / Supermoto frame variants (MuZ Baghira, MuZ Mastiff, Yamaha XTZ 660 Tenere) due to frame/shock clearance.</li>
-      </ul>
-      <strong>Shipping:</strong> €20 flat rate within the EU | €40 flat rate outside the EU (calculated automatically at PayPal checkout).
+    <div class="container">
+      <div class="brand-bar">
+        <span class="brand-name">YOUR BRAND NAME</span>
+        <span class="badge-origin">Engineered in Sweden &bull; Worldwide Tracked Shipping</span>
+      </div>
+      <h1>2-into-1 Single Carburetor Intake Manifolds</h1>
+      <p class="subtitle">
+        Eliminate finicky dual-carburetor synchronization on Yamaha 660 5-valve engines. Additively manufactured with a true continuous 2-into-1 merge collector for high-flow flat-slide carburetors.
+      </p>
+      <div class="fitment-pills">
+        <span class="pill">Yamaha Raptor 660R (01–05)</span>
+        <span class="pill">Yamaha SZR660</span>
+        <span class="pill">Yamaha XTZ660 Ténéré (91–98)</span>
+        <span class="pill">MuZ Skorpion / Baghira / Mastiff 660</span>
+      </div>
     </div>
   </header>
 
-  <main class="product-grid">
+  <main class="container">
 
-    <!-- TYPE 1: FCR 39/41 - PA12 -->
-    <article class="product-card">
-      <img src="images/fcr-pa12.jpg" alt="FCR 39/41 Intake Manifold in HP MJF PA12">
-      <div class="product-info">
-        <div class="badge-row">
-          <span class="badge badge-pa12">HP MJF PA12</span>
+    <div class="notice-box">
+      <strong>Important Fitment Note — Rubber Carburetor Boot NOT Included:</strong>
+      Each kit includes the serialized intake manifold, Viton cylinder-head O-rings, and brand stickers. You must supply a standard OEM-style rubber spigot adapter boot matching your carburetor (e.g., Yamaha WR450F / KTM / Mikuni rubber flange boot).
+    </div>
+
+    <section class="products">
+
+      <!-- PRODUCT 1: MJF PA12 (PRIMARY SELLER) -->
+      <article class="card featured">
+        <span class="ribbon">Recommended &bull; Best Performance</span>
+        <!-- Replace the div content below with <img src="./images/pa12-manifold.jpg" alt="MJF PA12 Intake Manifold"> -->
+        <div class="img-placeholder">
+          [Add photo: ./images/pa12-manifold.jpg]
         </div>
-        <h2>Single-Carb Manifold — FCR 39 / 41 (PA12)</h2>
-        <p class="description">Lightweight, thermally insulating HP Multi Jet Fusion intake manifold engineered to adapt a single Keihin FCR carburetor to the dual-port 660 head.</p>
-        <ul class="specs">
-          <li><strong>Carburetor fitment:</strong> Keihin FCR 39mm &amp; FCR 41mm</li>
-          <li><strong>Material:</strong> HP MJF 3D-printed PA12 nylon (isotropic, fuel &amp; heat resistant, reduces heat soak)</li>
-          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
-        </ul>
+        <h2>Performance MJF PA12 Manifold</h2>
         <div class="price-row">
-          <span class="price">€149.00</span>
-          <span class="shipping-tag">+ €20 EU / €40 World</span>
+          <span class="price-eur">&euro;99</span>
+          <span class="price-usd">(~$109 USD + shipping)</span>
         </div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
-      </div>
-    </article>
-
-    <!-- TYPE 1: FCR 39/41 - ALUMINUM -->
-    <article class="product-card">
-      <img src="images/fcr-alu.jpg" alt="FCR 39/41 Intake Manifold in 3D-Printed Aluminum">
-      <div class="product-info">
-        <div class="badge-row">
-          <span class="badge badge-alu">3D-Printed Aluminum</span>
-        </div>
-        <h2>Single-Carb Manifold — FCR 39 / 41 (Aluminum)</h2>
-        <p class="description">Rigid metal 3D-printed intake manifold with smooth internal runner transitions for converting the Yamaha 660 to a single Keihin FCR carburetor.</p>
-        <ul class="specs">
-          <li><strong>Carburetor fitment:</strong> Keihin FCR 39mm &amp; FCR 41mm</li>
-          <li><strong>Material:</strong> Industrial 3D-printed Aluminum (DMLS/SLM metal additive)</li>
-          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
+        <ul class="specs-list">
+          <li><strong>Thermal Barrier:</strong> Blocks cylinder head heat soak to prevent fuel percolation and keep intake air denser.</li>
+          <li><strong>Industrial HP MJF PA12 (Made in Italy):</strong> Fuel/E85 impervious, watertight, dyed matte black finish, 175&deg;C (347&deg;F) heat deflection.</li>
+          <li><strong>Reinforced Mounting:</strong> Pressed-in metal crush limiters at head flanges for reliable bolt torque.</li>
+          <li><strong>Ultra-Light Construction:</strong> Minimizes cantilever stress on cylinder head studs.</li>
+          <li><strong>Included:</strong> Individually serialized manifold, Viton O-rings &amp; 2&times; decals.</li>
         </ul>
-        <div class="price-row">
-          <span class="price">€189.00</span>
-          <span class="shipping-tag">+ €20 EU / €40 World</span>
-        </div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
-      </div>
-    </article>
 
-    <!-- TYPE 2: TM40/42 & DELLORTO - PA12 -->
-    <article class="product-card">
-      <img src="images/tm40-pa12.jpg" alt="TM40/42 Dellorto 40/41 Malossi 41 Manifold in HP MJF PA12">
-      <div class="product-info">
-        <div class="badge-row">
-          <span class="badge badge-pa12">HP MJF PA12</span>
+        <div class="order-controls">
+          <div class="field">
+            <label for="carb-pa12">1. Select Carburetor Fitment</label>
+            <select id="carb-pa12">
+              <option value="Keihin FCR 39 / 41">Keihin FCR 39 / 41</option>
+              <option value="Mikuni TM 40 / 42">Mikuni TM 40 / 42</option>
+              <option value="Mikuni HSR 45 / 48">Mikuni HSR 45 / 48</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ship-pa12">2. Select Shipping Destination</label>
+            <select id="ship-pa12" onchange="updateTotal('pa12', 99)">
+              <option value="20" data-zone="EU">European Union (Tracked PostNord) — &euro;20</option>
+              <option value="40" data-zone="WORLD">USA &amp; Worldwide (Tracked PostNord) — &euro;40</option>
+            </select>
+          </div>
+          <div class="total-line">
+            <span>Total Delivered (EUR):</span>
+            <span class="total-amount" id="total-pa12">&euro;119</span>
+          </div>
+          <button class="btn-paypal" onclick="checkout('pa12', 99)">
+            Buy with PayPal / Card
+          </button>
+          <p class="checkout-sub">PayPal converts EUR to USD/local currency automatically at checkout.</p>
         </div>
-        <h2>Single-Carb Manifold — TM40/42 &amp; Dell'Orto 40/41 (PA12)</h2>
-        <p class="description">Thermally insulating HP Multi Jet Fusion 2-into-1 conversion manifold sized for mid-bore Mikuni, Dell'Orto, and Malossi single carburetors.</p>
-        <ul class="specs">
-          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41</li>
-          <li><strong>Material:</strong> HP MJF 3D-printed PA12 nylon (isotropic, fuel &amp; heat resistant)</li>
-          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
+      </article>
+
+      <!-- PRODUCT 2: 3D-PRINTED ALUMINUM (PREMIUM ANCHOR) -->
+      <article class="card">
+        <span class="ribbon secondary">Small Batch &bull; Metal Edition</span>
+        <!-- Replace the div content below with <img src="./images/alu-manifold.jpg" alt="3D-Printed Aluminum Intake Manifold"> -->
+        <div class="img-placeholder">
+          [Add photo: ./images/alu-manifold.jpg]
+        </div>
+        <h2>3D-Printed Aluminum Manifold (AlSi10Mg)</h2>
+        <div class="price-row">
+          <span class="price-eur">&euro;219</span>
+          <span class="price-usd">(~$240 USD + shipping)</span>
+        </div>
+        <ul class="specs-list">
+          <li><strong>Laser-Sintered Metal (DMLS / SLM):</strong> Aerospace-grade AlSi10Mg aluminum alloy with true continuous internal 2-into-1 venturi geometry impossible to achieve with traditional CNC machining.</li>
+          <li><strong>Hand-Finished in Sweden:</strong> Each manifold receives 30 minutes of manual port smoothing, flange surfacing, and finishing.</li>
+          <li><strong>Lightweight Thin-Wall Design:</strong> Significantly lighter than bulky billet blocks while delivering rigid metal mounting.</li>
+          <li><strong>Individually Serialized:</strong> Stamped serial number for traceability.</li>
+          <li><strong>Included:</strong> Individually serialized metal manifold, Viton O-rings &amp; 2&times; decals.</li>
         </ul>
-        <div class="price-row">
-          <span class="price">€149.00</span>
-          <span class="shipping-tag">+ €20 EU / €40 World</span>
+
+        <div class="order-controls">
+          <div class="field">
+            <label for="carb-alu">1. Select Carburetor Fitment</label>
+            <select id="carb-alu">
+              <option value="Keihin FCR 39 / 41">Keihin FCR 39 / 41</option>
+              <option value="Mikuni TM 40 / 42">Mikuni TM 40 / 42</option>
+              <option value="Mikuni HSR 45 / 48">Mikuni HSR 45 / 48</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ship-alu">2. Select Shipping Destination</label>
+            <select id="ship-alu" onchange="updateTotal('alu', 219)">
+              <option value="20" data-zone="EU">European Union (Tracked PostNord) — &euro;20</option>
+              <option value="40" data-zone="WORLD">USA &amp; Worldwide (Tracked PostNord) — &euro;40</option>
+            </select>
+          </div>
+          <div class="total-line">
+            <span>Total Delivered (EUR):</span>
+            <span class="total-amount" id="total-alu">&euro;239</span>
+          </div>
+          <button class="btn-paypal" onclick="checkout('alu', 219)">
+            Buy with PayPal / Card
+          </button>
+          <p class="checkout-sub">PayPal converts EUR to USD/local currency automatically at checkout.</p>
         </div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </article>
+
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="section">
+      <h3>MJF PA12 vs. 3D-Printed Aluminum Comparison</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>Performance MJF PA12 (&euro;99)</th>
+              <th>3D-Printed Aluminum (&euro;219)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Heat Transfer to Carb</strong></td>
+              <td>Low (Thermal insulator — cooler fuel)</td>
+              <td>High (Conducts engine heat)</td>
+            </tr>
+            <tr>
+              <td><strong>Manufacturing &amp; Material</strong></td>
+              <td>HP Multi Jet Fusion PA12 (Made in Italy)</td>
+              <td>DMLS Laser-Sintered AlSi10Mg Aluminum (Hand-finished in Sweden)</td>
+            </tr>
+            <tr>
+              <td><strong>Internal Flow Path</strong></td>
+              <td>Smooth continuous 2-into-1 lofted runner</td>
+              <td>Hand-smoothed continuous 2-into-1 lofted runner</td>
+            </tr>
+            <tr>
+              <td><strong>Flange Hardware</strong></td>
+              <td>Pressed metal crush sleeves + Viton O-rings</td>
+              <td>Solid metal flanges + Viton O-rings</td>
+            </tr>
+            <tr>
+              <td><strong>Best For</strong></td>
+              <td>Trail, enduro, track &amp; street performance</td>
+              <td>Custom metal builds &amp; extreme mechanical rigidity</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </article>
+    </section>
 
-    <!-- TYPE 2: TM40/42 & DELLORTO - ALUMINUM -->
-    <article class="product-card">
-      <img src="images/tm40-alu.jpg" alt="TM40/42 Dellorto 40/41 Malossi 41 Manifold in 3D-Printed Aluminum">
-      <div class="product-info">
-        <div class="badge-row">
-          <span class="badge badge-alu">3D-Printed Aluminum</span>
-        </div>
-        <h2>Single-Carb Manifold — TM40/42 &amp; Dell'Orto 40/41 (Aluminum)</h2>
-        <p class="description">Heavy-duty 3D-printed metal 2-into-1 conversion manifold built for mid-bore Mikuni, Dell'Orto, and Malossi single carburetors.</p>
-        <ul class="specs">
-          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41</li>
-          <li><strong>Material:</strong> Industrial 3D-printed Aluminum (DMLS/SLM metal additive)</li>
-          <li><strong>Vehicle fitment:</strong> SZR 660, MuZ Skorpion (road), Raptor 660</li>
-        </ul>
-        <div class="price-row">
-          <span class="price">€189.00</span>
-          <span class="shipping-tag">+ €20 EU / €40 World</span>
-        </div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+    <!-- SHIPPING & TERMS -->
+    <section class="info-grid">
+      <div class="info-card">
+        <h4>Tracked Worldwide Shipping</h4>
+        <p>
+          All orders ship from Sweden via tracked PostNord service: <strong>&euro;20 EU</strong> / <strong>&euro;40 USA &amp; Worldwide</strong>. Tracking details are sent automatically to your PayPal email address upon dispatch. Buyers outside the EU are responsible for any local customs duties or import taxes.
+        </p>
       </div>
-    </article>
+      <div class="info-card">
+        <h4>Usage &amp; Returns</h4>
+        <p>
+          Intended for off-road / closed-course competition use; carburetor re-jetting is required after installation. Unused, uninstalled manifolds in original condition may be returned within 14 days of delivery (buyer covers return shipping).
+        </p>
+      </div>
+    </section>
 
-    <!-- TYPE 3: TM45/48 & HSR45/48 - PA12 -->
-    <article class="product-card">
-      <img src="images/tm45-pa12.jpg" alt="TM45/48 HSR45/48 Intake Manifold in HP MJF PA12">
-      <div class="product-info">
-        <div class="badge-row">
-          <span class="badge badge-pa12">HP MJF PA12</span>
-        </div>
+  </main>
 
+  <footer>
+    <div class="container">
+      <p>
+        Questions about carburetor fitment or rubber boot part numbers? Contact:
+        <a href="mailto:your-email@example.com">your-email@example.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // PASTE YOUR 4 PAYPAL PAYMENT LINKS HERE (created in PayPal Business)
+    // =========================================================================
+    const PAYPAL_LINKS = {
+      pa12_EU: "https://www.paypal.com/ncp/payment/REPLACE_PA12_EU_119EUR",
+      pa12_WORLD: "https://www.paypal.com/ncp/payment/REPLACE_PA12_WORLD_139EUR",
+      alu_EU: "https://www.paypal.com/ncp/payment/REPLACE_ALU_EU_239EUR",
+      alu_WORLD: "https://www.paypal.com/ncp/payment/REPLACE_ALU_WORLD_259EUR"
+    };
+
+    function updateTotal(product, basePrice) {
+      const shipSelect = document.getElementById(\\\`ship-${product}\\\`);
+      const shippingCost = parseInt(shipSelect.value, 10);
+      const total = basePrice + shippingCost;
+      document.getElementById(\\\`total-${product}\\\`).textContent = \\\`€${total}\\\`;
+    }
+
+    function checkout(product, basePrice) {
+      const carb = document.getElementById(\\\`carb-${product}\\\`).value;
+      const shipSelect = document.getElementById(\\\`ship-${product}\\\`);
+      const zone = shipSelect.options[shipSelect.selectedIndex].getAttribute("data-zone");
+      const key = \\\`${product}_${zone}\\\`;
+      const targetUrl = PAYPAL_LINKS[key];
+
+      if (!targetUrl || targetUrl.includes("REPLACE_")) {
+        alert(
+          \\\`Demo mode: Please select "${carb}" inside PayPal checkout.\\\\n\\\\n\\\` +
+          \\\`To activate live checkout, replace "${key}" in index.html with your PayPal Payment Link.\\\`
+        );
+        return;
+      }
+
+      window.location.href = targetUrl;
+    }
+  </script>
+
+</body>
+</html>
