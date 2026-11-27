@@ -18,10 +18,10 @@
     .fitment-notice { background: #fff; border-left: 4px solid #9333ea; border-radius: 6px; padding: 1rem 1.25rem; text-align: left; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 0.92rem; }
     .fitment-notice ul { margin: 0.4rem 0 0.6rem 1.25rem; }
     .fitment-notice li { margin-bottom: 0.25rem; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; align-items: start; }
     .product-card { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #facc15; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .product-card img { width: 100%; height: 210px; object-fit: cover; background: #e5e7eb; }
-    .product-info { padding: 1.25rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .product-card img { width: 100%; height: 210px; object-fit: cover; background: #e5e7eb; display: block; }
+    .product-info { padding: 1.25rem; display: flex; flex-direction: column; }
     .badge-row { display: flex; gap: 0.5rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
     .badge { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 4px; }
     .badge-pa12 { background: #f3e8ff; color: #6b21a8; }
@@ -30,7 +30,7 @@
     .badge-origin-cn { background: #fef3c7; color: #92400e; }
     .product-info h2 { font-size: 1.18rem; color: #111827; margin-bottom: 0.5rem; }
     .description { font-size: 0.92rem; color: #4b5563; margin-bottom: 0.75rem; }
-    .specs { font-size: 0.86rem; color: #374151; margin-bottom: 1rem; padding-left: 1.15rem; flex-grow: 1; }
+    .specs { font-size: 0.86rem; color: #374151; margin-bottom: 1rem; padding-left: 1.15rem; }
     .specs li { margin-bottom: 0.35rem; }
     .price-box { border-top: 1px solid #f3f4f6; padding-top: 0.85rem; margin-bottom: 0.85rem; }
     .price { font-size: 1.35rem; font-weight: 700; color: #111827; }
@@ -52,7 +52,7 @@
   <header>
     <div class="brand-bar">Garage83 <span class="brand-dot-y">●</span><span class="brand-dot-p">●</span><span class="brand-dot-pk">●</span> Designed in Sweden</div>
     <h1>Super Single Power Bomb</h1>
-    <p class="subtitle">2-into-1 single-carburetor conversion intake manifolds for the 5-valve Yamaha 660 engine.</p>
+    <p class="subtitle">Single-carb intake manifold for the 5-valve Yamaha 660 engine</p>
     <div class="fitment-notice">
       <strong>Vehicle Compatibility &amp; Installation Notes — Please Read Before Ordering:</strong>
       <ul>
@@ -68,7 +68,7 @@
   <main class="product-grid">
 
     <!-- 1. FCR 39/41 - PA12 -->
-    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://paypal.com" data-link-world="https://paypal.com">
+    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_WORLD">
       <img src="images/fcr-pa12.jpg" alt="Super Single Power Bomb FCR 39/41 in HP MJF PA12">
       <div class="product-info">
         <div class="badge-row">
@@ -94,12 +94,12 @@
           </select>
         </div>
         <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
     <!-- 2. FCR 39/41 - ALUMINUM -->
-    <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://paypal.com" data-link-world="https://paypal.com">
+    <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_WORLD">
       <img src="images/fcr-alu.jpg" alt="Super Single Power Bomb FCR 39/41 in 3D-Printed Aluminum">
       <div class="product-info">
         <div class="badge-row">
@@ -125,12 +125,41 @@
           </select>
         </div>
         <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
     <!-- 3. TM40/42 & DELLORTO - PA12 -->
-    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://paypal.com" data-link-world="https://paypal.com">
+    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_WORLD">
+      <img src="images/tm40-pa12.jpg" alt="Super Single Power Bomb TM40/42 Dellorto Lectron in HP MJF PA12">
+      <div class="product-info">
+        <div class="badge-row">
+          <span class="badge badge-pa12">HP MJF PA12</span>
+          <span class="badge badge-origin-it">Made in Italy</span>
+        </div>
+        <h2>Super Single Power Bomb — TM40/42 &amp; Dell'Orto 40/41 (PA12)</h2>
+        <p class="description">Thermally insulating HP Multi Jet Fusion 2-into-1 conversion manifold sized for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41, and other 56mm spigot carbs (such as Lectron)</li>
+          <li><strong>Included hardware:</strong> Cylinder head sealing O-rings, mounting bolt crush sleeves &amp; 2 Garage83 stickers</li>
+          <li><strong>Required rubber boot (not included):</strong> KTM 584.36.044.000</li>
+          <li><strong>Design &amp; Origin:</strong> Designed in Sweden · HP MJF PA12 manufactured in Italy</li>
+        </ul>
+        <div class="price-box">
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
+        </div>
+        <div class="shipping-selector">
+          <label>Shipping Destination:</label>
+          <select onchange="updateShipping(this)">
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
+          </select>
+        </div>
+        <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
     <!-- 4. TM40/42 & DELLORTO - ALUMINUM -->
     <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_ALU_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_ALU_WORLD">
       <img src="images/tm40-alu.jpg" alt="Super Single Power Bomb TM40/42 Dellorto Lectron in 3D-Printed Aluminum">
