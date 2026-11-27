@@ -7,8 +7,8 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     body { background: #f4f5f7; color: #1f2937; padding: 2rem 1.25rem; line-height: 1.5; }
-    header, .product-grid, footer { max-width: 1100px; margin: 0 auto; }
-    header { text-align: center; margin-bottom: 2rem; }
+    header, .guide-section, .product-grid, footer { max-width: 1100px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 1.75rem; }
     .brand-bar { display: inline-flex; align-items: center; gap: 0.5rem; background: #111827; color: #fff; padding: 0.35rem 0.9rem; border-radius: 999px; font-weight: 800; letter-spacing: 0.06em; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.75rem; border-bottom: 3px solid #ec4899; }
     .brand-dot-y { color: #facc15; }
     .brand-dot-p { color: #a855f7; }
@@ -19,6 +19,20 @@
     .fitment-notice ul { margin: 0.4rem 0 0.6rem 1.25rem; }
     .fitment-notice li { margin-bottom: 0.25rem; }
     .fitment-notice a { color: #7e22ce; font-weight: 600; }
+
+    /* Carburetor Selection Guide */
+    .guide-section { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .guide-section h2 { font-size: 1.15rem; color: #111827; margin-bottom: 0.35rem; }
+    .guide-intro { font-size: 0.9rem; color: #4b5563; margin-bottom: 1rem; }
+    .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .guide-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 0.9rem 1rem; font-size: 0.88rem; }
+    .guide-card h3 { font-size: 0.98rem; color: #111827; margin-bottom: 0.3rem; }
+    .guide-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; padding: 0.15rem 0.45rem; border-radius: 4px; margin-bottom: 0.4rem; }
+    .tag-street { background: #dcfce7; color: #166534; }
+    .tag-tuned { background: #f3e8ff; color: #6b21a8; }
+    .tag-race { background: #fee2e2; color: #991b1b; }
+
+    /* Product Grid */
     .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; align-items: start; }
     .product-card { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #facc15; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
     .product-card.featured-pa12 { border-color: #c084fc; border-top: 4px solid #9333ea; }
@@ -53,21 +67,43 @@
 <body>
 
   <header>
-    <div class="brand-bar">Garage83 <span class="brand-dot-y">&#9679;</span><span class="brand-dot-p">&#9679;</span><span class="brand-dot-pk">&#9679;</span> Designed in Sweden</div>
+    <div class="brand-bar">Garage83 <span class="brand-dot-y">●</span><span class="brand-dot-p">●</span><span class="brand-dot-pk">●</span> Designed in Sweden</div>
     <h1>Super Single Power Bomb</h1>
     <p class="subtitle">Single-carb intake manifold for the 5-valve Yamaha 660 engine</p>
     <div class="fitment-notice">
-      <strong>Vehicle Compatibility &amp; Design Notes &mdash; Please Read Before Ordering:</strong>
+      <strong>Vehicle Compatibility &amp; Installation Notes — Please Read Before Ordering:</strong>
       <ul>
         <li><strong>Fits ONLY:</strong> Yamaha SZR 660, MuZ 660 Skorpion (Sport / Tour / Replica road models), and Yamaha Raptor 660 (YFM660R).</li>
         <li><strong>Does NOT fit:</strong> Off-road / Supermoto frame variants (MuZ Baghira, MuZ Mastiff, Yamaha XTZ 660 Tenere) due to frame/shock clearance.</li>
         <li><strong>Installation Note:</strong> Even on compatible models, converting to a single carburetor may require modifying or replacing the <strong>fuel tank and airbox</strong> for clearance.</li>
-        <li><strong>Identical Internal Runner Geometry:</strong> Every manifold is 3D-printed (available in HP MJF PA12 or Aluminum). For each carburetor size, the PA12 and Aluminum versions share the <strong>exact same internal runner geometry</strong>&mdash;only the outer shell design differs between materials (with the large-bore TM45/48 &amp; HSR45/48 models featuring dedicated high-flow runners tailored to their larger inlet).</li>
+        <li><strong>Runner Design:</strong> For each carburetor group, the 3D-printed PA12 and 3D-printed Aluminum manifolds share the <strong>exact same internal runner geometry</strong> (only the outer shell differs).</li>
         <li><strong>What's Included:</strong> Cylinder head sealing hardware + <strong>2 free 90s-style Garage83 stickers</strong> (yellow, purple &amp; pink) in every package. <strong>Rubber carburetor mounting boots are NOT included</strong> (compatible part numbers listed on each item).</li>
       </ul>
-      <strong>Freight:</strong> &euro;20 (~$22 USD) within the EU | &euro;40 (~$44 USD) outside the EU (<a href="#shipping-info">see full shipping &amp; country list below</a>).
+      <strong>Freight:</strong> €20 (~$22 USD) within the EU | €40 (~$44 USD) outside the EU (<a href="#shipping-info">see full shipping &amp; country list below</a>).
     </div>
   </header>
+
+  <section class="guide-section">
+    <h2>Which Carburetor Size Should You Choose?</h2>
+    <p class="guide-intro">Match your carburetor bore to your engine build—bigger is not always better on a single-cylinder 660:</p>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <span class="guide-tag tag-street">Stock &amp; Mild Street</span>
+        <h3>39mm – 40mm (FCR 39, TM40, Dell'Orto 40)</h3>
+        <p>Best choice for stock engines, slip-on exhausts, and street riding. High intake air velocity delivers crisp low-to-midrange throttle response and easy starting.</p>
+      </div>
+      <div class="guide-card">
+        <span class="guide-tag tag-tuned">Tuned Street &amp; Track</span>
+        <h3>41mm – 42mm (FCR 41, TM42, Dell'Orto 41, Malossi 41, Lectron)</h3>
+        <p>Ideal for modified 660 builds with upgraded camshafts, higher compression, open exhaust, and airbox work—boosting top-end pull while keeping strong street manners.</p>
+      </div>
+      <div class="guide-card">
+        <span class="guide-tag tag-race">Race / Big-Bore Only</span>
+        <h3>45mm – 48mm (TM45/48 &amp; HSR45/48)</h3>
+        <p><strong>Not for stock engines.</strong> Oversized bores reduce low-RPM air speed on mild motors. Built strictly for heavily ported, big-bore, high-RPM Supermono and race engines.</p>
+      </div>
+    </div>
+  </section>
 
   <main class="product-grid">
 
@@ -80,26 +116,25 @@
           <span class="badge badge-pa12">3D-Printed HP MJF PA12</span>
           <span class="badge badge-origin-it">Made in Italy</span>
         </div>
-        <h2>Super Single Power Bomb &mdash; FCR 39 / 41 (PA12)</h2>
-        <p class="description">Lightweight, thermally insulating 3D-printed intake manifold that reduces carburetor heat soak while delivering near-isotropic, injection-molded-grade strength for Keihin FCR conversions.</p>
+        <h2>Super Single Power Bomb — FCR 39 / 41 (PA12)</h2>
+        <p class="description">Lightweight, thermally insulating 3D-printed manifold that reduces heat soak while delivering near-isotropic, injection-molded-grade strength for Keihin FCR conversions.</p>
         <ul class="specs">
           <li><strong>Carburetor fitment:</strong> Keihin FCR 39mm &amp; FCR 41mm</li>
-          <li><strong>Internal runners:</strong> Shares the exact same internal runner geometry as the FCR 39/41 Aluminum version</li>
           <li><strong>Head sealing &amp; hardware (included):</strong> Cylinder head O-ring seals, integrated metal crush sleeves (prevents polymer creep and preserves bolt torque), plus 2 Garage83 stickers</li>
           <li><strong>Required rubber boot (not included):</strong> Tourmax CHY-87 (or Yamaha WR450F intake rubber)</li>
-          <li><strong>Material &amp; Origin:</strong> Designed in Sweden &middot; 3D-printed HP MJF PA12 manufactured in Italy</li>
+          <li><strong>Material &amp; Origin:</strong> Designed in Sweden · Near-isotropic 3D-printed HP MJF PA12 manufactured in Italy</li>
         </ul>
         <div class="price-box">
-          <span class="price">&euro;99.00</span><span class="usd-approx">(approx. $109 USD)</span>
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
-            <option value="eu">Within EU (+ &euro;20 / ~$22 USD freight)</option>
-            <option value="world">Outside EU (+ &euro;40 / ~$44 USD freight)</option>
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
           </select>
         </div>
-        <div class="total-line">Total with shipping: &euro;119.00 (~$131 USD)</div>
+        <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
         <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
@@ -112,26 +147,25 @@
           <span class="badge badge-alu">3D-Printed Aluminum</span>
           <span class="badge badge-origin-cn">Made in China</span>
         </div>
-        <h2>Super Single Power Bomb &mdash; FCR 39 / 41 (Aluminum)</h2>
-        <p class="description">Rigid metal 3D-printed intake manifold with smooth internal runner transitions for converting the Yamaha 660 to a single Keihin FCR carburetor.</p>
+        <h2>Super Single Power Bomb — FCR 39 / 41 (Aluminum)</h2>
+        <p class="description">Rigid metal 3D-printed intake manifold sharing the exact same internal runner geometry as the PA12 version, built for converting the Yamaha 660 to a single Keihin FCR carburetor.</p>
         <ul class="specs">
           <li><strong>Carburetor fitment:</strong> Keihin FCR 39mm &amp; FCR 41mm</li>
-          <li><strong>Internal runners:</strong> Shares the exact same internal runner geometry as the FCR 39/41 PA12 version (different outer shell)</li>
           <li><strong>Head sealing &amp; hardware (included):</strong> Precision cylinder head paper gasket &amp; 2 Garage83 stickers</li>
           <li><strong>Required rubber boot (not included):</strong> Tourmax CHY-87 (or Yamaha WR450F intake rubber)</li>
-          <li><strong>Material &amp; Origin:</strong> Designed in Sweden &middot; 3D-printed Aluminum manufactured in China</li>
+          <li><strong>Material &amp; Origin:</strong> Designed in Sweden · 3D-printed Aluminum manufactured in China</li>
         </ul>
         <div class="price-box">
-          <span class="price">&euro;219.00</span><span class="usd-approx">(approx. $240 USD)</span>
+          <span class="price">€219.00</span><span class="usd-approx">(approx. $240 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
-            <option value="eu">Within EU (+ &euro;20 / ~$22 USD freight)</option>
-            <option value="world">Outside EU (+ &euro;40 / ~$44 USD freight)</option>
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
           </select>
         </div>
-        <div class="total-line">Total with shipping: &euro;239.00 (~$262 USD)</div>
+        <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
         <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
@@ -145,26 +179,25 @@
           <span class="badge badge-pa12">3D-Printed HP MJF PA12</span>
           <span class="badge badge-origin-it">Made in Italy</span>
         </div>
-        <h2>Super Single Power Bomb &mdash; TM40/42 &amp; Dell'Orto 40/41 (PA12)</h2>
-        <p class="description">Thermally insulating 3D-printed HP Multi Jet Fusion manifold with near-isotropic, injection-molded-grade strength, sized for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
+        <h2>Super Single Power Bomb — TM40/42 &amp; Dell'Orto 40/41 (PA12)</h2>
+        <p class="description">Thermally insulating 3D-printed HP MJF manifold with near-isotropic, injection-molded-grade strength, sized for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
         <ul class="specs">
           <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41, and other 56mm spigot carbs (such as Lectron)</li>
-          <li><strong>Internal runners:</strong> Shares the exact same internal runner geometry as the TM40/42 Aluminum version</li>
           <li><strong>Head sealing &amp; hardware (included):</strong> Cylinder head O-ring seals, integrated metal crush sleeves (prevents polymer creep and preserves bolt torque), plus 2 Garage83 stickers</li>
           <li><strong>Required rubber boot (not included):</strong> KTM 584.36.044.000</li>
-          <li><strong>Material &amp; Origin:</strong> Designed in Sweden &middot; 3D-printed HP MJF PA12 manufactured in Italy</li>
+          <li><strong>Material &amp; Origin:</strong> Designed in Sweden · Near-isotropic 3D-printed HP MJF PA12 manufactured in Italy</li>
         </ul>
         <div class="price-box">
-          <span class="price">&euro;99.00</span><span class="usd-approx">(approx. $109 USD)</span>
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
-            <option value="eu">Within EU (+ &euro;20 / ~$22 USD freight)</option>
-            <option value="world">Outside EU (+ &euro;40 / ~$44 USD freight)</option>
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
           </select>
         </div>
-        <div class="total-line">Total with shipping: &euro;119.00 (~$131 USD)</div>
+        <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
         <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
@@ -177,26 +210,25 @@
           <span class="badge badge-alu">3D-Printed Aluminum</span>
           <span class="badge badge-origin-cn">Made in China</span>
         </div>
-        <h2>Super Single Power Bomb &mdash; TM40/42 &amp; Dell'Orto 40/41 (Aluminum)</h2>
-        <p class="description">Heavy-duty 3D-printed metal 2-into-1 conversion manifold built for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
+        <h2>Super Single Power Bomb — TM40/42 &amp; Dell'Orto 40/41 (Aluminum)</h2>
+        <p class="description">Heavy-duty 3D-printed metal manifold sharing the exact same internal runner geometry as the PA12 version, built for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
         <ul class="specs">
           <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41, and other 56mm spigot carbs (such as Lectron)</li>
-          <li><strong>Internal runners:</strong> Shares the exact same internal runner geometry as the TM40/42 PA12 version (different outer shell)</li>
           <li><strong>Head sealing &amp; hardware (included):</strong> Precision cylinder head paper gasket &amp; 2 Garage83 stickers</li>
           <li><strong>Required rubber boot (not included):</strong> KTM 584.36.044.000</li>
-          <li><strong>Material &amp; Origin:</strong> Designed in Sweden &middot; 3D-printed Aluminum manufactured in China</li>
+          <li><strong>Material &amp; Origin:</strong> Designed in Sweden · 3D-printed Aluminum manufactured in China</li>
         </ul>
         <div class="price-box">
-          <span class="price">&euro;219.00</span><span class="usd-approx">(approx. $240 USD)</span>
+          <span class="price">€219.00</span><span class="usd-approx">(approx. $240 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
-            <option value="eu">Within EU (+ &euro;20 / ~$22 USD freight)</option>
-            <option value="world">Outside EU (+ &euro;40 / ~$44 USD freight)</option>
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
           </select>
         </div>
-        <div class="total-line">Total with shipping: &euro;239.00 (~$262 USD)</div>
+        <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
         <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
@@ -210,26 +242,25 @@
           <span class="badge badge-pa12">3D-Printed HP MJF PA12</span>
           <span class="badge badge-origin-it">Made in Italy</span>
         </div>
-        <h2>Super Single Power Bomb &mdash; TM45/48 &amp; HSR45/48 (PA12)</h2>
-        <p class="description">High-flow large-bore 3D-printed manifold combining low weight, heat-soak insulation, and near-isotropic, injection-molded-grade strength for tuned 45mm&ndash;48mm Mikuni builds.</p>
+        <h2>Super Single Power Bomb — TM45/48 &amp; HSR45/48 (PA12)</h2>
+        <p class="description">High-flow large-bore 3D-printed manifold with dedicated large-entry runners, combining heat-soak insulation and near-isotropic, injection-molded-grade strength for tuned 45mm–48mm Mikuni builds.</p>
         <ul class="specs">
           <li><strong>Carburetor fitment:</strong> Mikuni TM45 / TM48 &amp; Mikuni HSR45 / HSR48</li>
-          <li><strong>Internal runners:</strong> High-flow large-inlet runner geometry; identical internal runners to the TM45/48 &amp; HSR45/48 Aluminum version</li>
           <li><strong>Head sealing &amp; hardware (included):</strong> Cylinder head O-ring seals, integrated metal crush sleeves (prevents polymer creep and preserves bolt torque), plus 2 Garage83 stickers</li>
           <li><strong>Required rubber boot (not included):</strong> Mikuni HS42/018-45 (for HSR45/TM45) or HS42/062-48K (for HSR48/TM48)</li>
-          <li><strong>Material &amp; Origin:</strong> Designed in Sweden &middot; 3D-printed HP MJF PA12 manufactured in Italy</li>
+          <li><strong>Material &amp; Origin:</strong> Designed in Sweden · Near-isotropic 3D-printed HP MJF PA12 manufactured in Italy</li>
         </ul>
         <div class="price-box">
-          <span class="price">&euro;99.00</span><span class="usd-approx">(approx. $109 USD)</span>
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
-            <option value="eu">Within EU (+ &euro;20 / ~$22 USD freight)</option>
-            <option value="world">Outside EU (+ &euro;40 / ~$44 USD freight)</option>
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
           </select>
         </div>
-        <div class="total-line">Total with shipping: &euro;119.00 (~$131 USD)</div>
+        <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
         <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
@@ -242,26 +273,25 @@
           <span class="badge badge-alu">3D-Printed Aluminum</span>
           <span class="badge badge-origin-cn">Made in China</span>
         </div>
-        <h2>Super Single Power Bomb &mdash; TM45/48 &amp; HSR45/48 (Aluminum)</h2>
-        <p class="description">High-flow 3D-printed metal large-bore intake manifold engineered for performance 660 engines running 45mm or 48mm Mikuni carburetors.</p>
+        <h2>Super Single Power Bomb — TM45/48 &amp; HSR45/48 (Aluminum)</h2>
+        <p class="description">High-flow 3D-printed metal manifold sharing the exact same large-entry internal runner geometry as the PA12 version, engineered for performance 660 engines running 45mm or 48mm Mikuni carburetors.</p>
         <ul class="specs">
           <li><strong>Carburetor fitment:</strong> Mikuni TM45 / TM48 &amp; Mikuni HSR45 / HSR48</li>
-          <li><strong>Internal runners:</strong> High-flow large-inlet runner geometry; identical internal runners to the TM45/48 &amp; HSR45/48 PA12 version (different outer shell)</li>
           <li><strong>Head sealing &amp; hardware (included):</strong> Precision cylinder head paper gasket &amp; 2 Garage83 stickers</li>
           <li><strong>Required rubber boot (not included):</strong> Mikuni HS42/018-45 (for HSR45/TM45) or HS42/062-48K (for HSR48/TM48)</li>
-          <li><strong>Material &amp; Origin:</strong> Designed in Sweden &middot; 3D-printed Aluminum manufactured in China</li>
+          <li><strong>Material &amp; Origin:</strong> Designed in Sweden · 3D-printed Aluminum manufactured in China</li>
         </ul>
         <div class="price-box">
-          <span class="price">&euro;219.00</span><span class="usd-approx">(approx. $240 USD)</span>
+          <span class="price">€219.00</span><span class="usd-approx">(approx. $240 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
-            <option value="eu">Within EU (+ &euro;20 / ~$22 USD freight)</option>
-            <option value="world">Outside EU (+ &euro;40 / ~$44 USD freight)</option>
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
           </select>
         </div>
-        <div class="total-line">Total with shipping: &euro;239.00 (~$262 USD)</div>
+        <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
         <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
@@ -269,11 +299,11 @@
   </main>
 
   <footer id="shipping-info">
-    <h3>Garage83 &mdash; Contact, Shipping &amp; Customs Disclaimer</h3>
+    <h3>Garage83 — Contact, Shipping &amp; Customs Disclaimer</h3>
     <p><strong>Questions &amp; Fitment Inquiries:</strong> Designed in Sweden by <strong>Garage83</strong>. Need help choosing a manifold or live outside our standard shipping list? Email <a href="mailto:garage_eightythree@proton.me">garage_eightythree@proton.me</a> before ordering.</p>
-    <p><strong>Where We Ship:</strong> All parts are brand new and shipped with tracking from Sweden. We ship to all <strong>EU Member States (&euro;20 freight)</strong> as well as reliable international destinations including the <strong>UK, Norway, Switzerland, USA, Canada, Australia, New Zealand, and Japan (&euro;40 freight)</strong>.</p>
+    <p><strong>Where We Ship:</strong> All parts are brand new and shipped with tracking from Sweden. We ship to all <strong>EU Member States (€20 freight)</strong> as well as reliable international destinations including the <strong>UK, Norway, Switzerland, USA, Canada, Australia, New Zealand, and Japan (€40 freight)</strong>.</p>
     <p><strong>Excluded Destinations:</strong> In compliance with EU export regulations and international carrier restrictions, we <strong>do not ship</strong> to Russia, Belarus, Iran, North Korea, Syria, occupied territories in Ukraine, or active conflict zones with suspended postal service (such as Yemen, Sudan, South Sudan, Somalia, Libya, Afghanistan, and Haiti). Orders placed from unsupported regions or with incorrect shipping tiers will be canceled and refunded minus non-refundable payment processing fees.</p>
-    <p><strong>Customs &amp; Currency Notice:</strong> All transactions are billed in <strong>Euros (&euro;)</strong>; USD amounts shown are approximate guides (~1 EUR = 1.10 USD) and PayPal converts at its live rate. Buyers outside the EU are responsible for any local import duties, customs clearance fees, or VAT assessed upon arrival.</p>
+    <p><strong>Customs &amp; Currency Notice:</strong> All transactions are billed in <strong>Euros (€)</strong>; USD amounts shown are approximate guides (~1 EUR = 1.10 USD) and PayPal converts at its live rate. Buyers outside the EU are responsible for any local import duties, customs clearance fees, or VAT assessed upon arrival.</p>
   </footer>
 
   <script>
