@@ -19,10 +19,14 @@
       line-height: 1.5;
     }
 
-    header {
+    header, .product-grid, footer {
       max-width: 1100px;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto;
+    }
+
+    header {
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     header h1 {
@@ -31,7 +35,7 @@
       margin-bottom: 0.5rem;
     }
 
-    header .subtitle {
+    .subtitle {
       font-size: 1.05rem;
       color: #4b5563;
       margin-bottom: 1.25rem;
@@ -63,8 +67,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
       gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
     }
 
     .product-card {
@@ -117,6 +119,11 @@
       color: #1e40af;
     }
 
+    .badge-alu {
+      background-color: #e5e7eb;
+      color: #1f2937;
+    }
+
     .badge-origin-it {
       background-color: #ecfdf5;
       color: #065f46;
@@ -125,11 +132,6 @@
     .badge-origin-cn {
       background-color: #fef3c7;
       color: #92400e;
-    }
-
-    .badge-alu {
-      background-color: #e5e7eb;
-      color: #1f2937;
     }
 
     .product-info h2 {
@@ -162,12 +164,6 @@
       margin-bottom: 0.85rem;
     }
 
-    .price-main {
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
-    }
-
     .price {
       font-size: 1.35rem;
       font-weight: 700;
@@ -177,10 +173,11 @@
     .usd-approx {
       font-size: 0.88rem;
       color: #6b7280;
+      margin-left: 0.35rem;
     }
 
     .shipping-selector {
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.75rem;
     }
 
     .shipping-selector label {
@@ -227,8 +224,7 @@
     }
 
     footer {
-      max-width: 1100px;
-      margin: 2.5rem auto 0 auto;
+      margin-top: 2.5rem;
       padding: 1.5rem;
       background-color: #ffffff;
       border: 1px solid #e5e7eb;
@@ -261,7 +257,7 @@
         <li><strong>Fits ONLY:</strong> Yamaha SZR 660, MuZ 660 Skorpion (Sport / Tour / Replica road models), and Yamaha Raptor 660 (YFM660R).</li>
         <li><strong>Does NOT fit:</strong> Off-road / Supermoto frame variants (MuZ Baghira, MuZ Mastiff, Yamaha XTZ 660 Tenere) due to frame/shock clearance.</li>
         <li><strong>Installation Note:</strong> Even on compatible models, converting to a single carburetor may require modifying or replacing the <strong>fuel tank and airbox</strong> for clearance.</li>
-        <li><strong>What's Included:</strong> Head-sealing hardware is included with every manifold. <strong>Rubber carburetor mounting boots are NOT included</strong> (compatible boot part numbers are listed on each product below).</li>
+        <li><strong>What's Included:</strong> Head-sealing hardware is included with every manifold. <strong>Rubber carburetor mounting boots are NOT included</strong> (compatible part numbers are listed on each product below).</li>
       </ul>
       <strong>Freight:</strong> €20 (~$22 USD) within the EU | €40 (~$44 USD) outside the EU. Select your shipping region on the item before clicking PayPal.
     </div>
@@ -269,8 +265,8 @@
 
   <main class="product-grid">
 
-    <!-- TYPE 1: FCR 39/41 - PA12 -->
-    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://paypal.com" data-link-world="https://paypal.com">
+    <!-- 1. FCR 39/41 - PA12 -->
+    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_WORLD">
       <img src="images/fcr-pa12.jpg" alt="FCR 39/41 Intake Manifold in HP MJF PA12">
       <div class="product-info">
         <div class="badge-row">
@@ -286,10 +282,7 @@
           <li><strong>Material &amp; Origin:</strong> HP MJF 3D-printed PA12 nylon — Manufactured in Italy</li>
         </ul>
         <div class="price-box">
-          <div class="price-main">
-            <span class="price">€99.00</span>
-            <span class="usd-approx">(approx. $109 USD)</span>
-          </div>
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
@@ -299,12 +292,12 @@
           </select>
         </div>
         <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
-        <a href="https://paypal.com" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
       </div>
     </article>
 
-    <!-- TYPE 1: FCR 39/41 - ALUMINUM -->
-    <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://paypal.com" data-link-world="https://paypal.com">
+    <!-- 2. FCR 39/41 - ALUMINUM -->
+    <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_WORLD">
       <img src="images/fcr-alu.jpg" alt="FCR 39/41 Intake Manifold in 3D-Printed Aluminum">
       <div class="product-info">
         <div class="badge-row">
@@ -320,12 +313,170 @@
           <li><strong>Material &amp; Origin:</strong> Industrial 3D-printed Aluminum — Manufactured in China</li>
         </ul>
         <div class="price-box">
-          <div class="price-main">
-            <span class="price">€219.00</span>
-            <span class="usd-approx">(approx. $240 USD)</span>
-          </div>
+          <span class="price">€219.00</span><span class="usd-approx">(approx. $240 USD)</span>
         </div>
         <div class="shipping-selector">
           <label>Shipping Destination:</label>
           <select onchange="updateShipping(this)">
             <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
+          </select>
+        </div>
+        <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_FCR_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- 3. TM40/42 & DELLORTO - PA12 -->
+    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_WORLD">
+      <img src="images/tm40-pa12.jpg" alt="TM40/42 Dellorto 40/41 Malossi 41 Lectron Manifold in HP MJF PA12">
+      <div class="product-info">
+        <div class="badge-row">
+          <span class="badge badge-pa12">HP MJF PA12</span>
+          <span class="badge badge-origin-it">Made in Italy</span>
+        </div>
+        <h2>Single-Carb Manifold — TM40/42 &amp; Dell'Orto 40/41 (PA12)</h2>
+        <p class="description">Thermally insulating HP Multi Jet Fusion 2-into-1 conversion manifold sized for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41, and other 56mm spigot carbs (such as Lectron)</li>
+          <li><strong>Included hardware:</strong> Cylinder head sealing O-rings &amp; mounting bolt crush sleeves</li>
+          <li><strong>Required rubber boot (not included):</strong> KTM 584.36.044.000</li>
+          <li><strong>Material &amp; Origin:</strong> HP MJF 3D-printed PA12 nylon — Manufactured in Italy</li>
+        </ul>
+        <div class="price-box">
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
+        </div>
+        <div class="shipping-selector">
+          <label>Shipping Destination:</label>
+          <select onchange="updateShipping(this)">
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
+          </select>
+        </div>
+        <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- 4. TM40/42 & DELLORTO - ALUMINUM -->
+    <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_ALU_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_ALU_WORLD">
+      <img src="images/tm40-alu.jpg" alt="TM40/42 Dellorto 40/41 Malossi 41 Lectron Manifold in 3D-Printed Aluminum">
+      <div class="product-info">
+        <div class="badge-row">
+          <span class="badge badge-alu">3D-Printed Aluminum</span>
+          <span class="badge badge-origin-cn">Made in China</span>
+        </div>
+        <h2>Single-Carb Manifold — TM40/42 &amp; Dell'Orto 40/41 (Aluminum)</h2>
+        <p class="description">Heavy-duty 3D-printed metal 2-into-1 conversion manifold built for mid-bore Mikuni, Dell'Orto, Malossi, and 56mm spigot carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM40 / TM42, Dell'Orto 40 / 41, Malossi 41, and other 56mm spigot carbs (such as Lectron)</li>
+          <li><strong>Included hardware:</strong> Cylinder head paper gasket</li>
+          <li><strong>Required rubber boot (not included):</strong> KTM 584.36.044.000</li>
+          <li><strong>Material &amp; Origin:</strong> Industrial 3D-printed Aluminum — Manufactured in China</li>
+        </ul>
+        <div class="price-box">
+          <span class="price">€219.00</span><span class="usd-approx">(approx. $240 USD)</span>
+        </div>
+        <div class="shipping-selector">
+          <label>Shipping Destination:</label>
+          <select onchange="updateShipping(this)">
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
+          </select>
+        </div>
+        <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM40_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- 5. TM45/48 & HSR45/48 - PA12 -->
+    <article class="product-card" data-base-eur="99" data-base-usd="109" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_PA12_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_PA12_WORLD">
+      <img src="images/tm45-pa12.jpg" alt="TM45/48 HSR45/48 Intake Manifold in HP MJF PA12">
+      <div class="product-info">
+        <div class="badge-row">
+          <span class="badge badge-pa12">HP MJF PA12</span>
+          <span class="badge badge-origin-it">Made in Italy</span>
+        </div>
+        <h2>Single-Carb Manifold — TM45/48 &amp; HSR45/48 (PA12)</h2>
+        <p class="description">High-flow large-bore HP Multi Jet Fusion intake manifold designed for tuned 660 builds running 45mm or 48mm Mikuni flat-slide carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM45 / TM48 &amp; Mikuni HSR45 / HSR48</li>
+          <li><strong>Included hardware:</strong> Cylinder head sealing O-rings &amp; mounting bolt crush sleeves</li>
+          <li><strong>Required rubber boot (not included):</strong> Mikuni HS42/018-45 (for HSR45/TM45) or HS42/062-48K (for HSR48/TM48)</li>
+          <li><strong>Material &amp; Origin:</strong> HP MJF 3D-printed PA12 nylon — Manufactured in Italy</li>
+        </ul>
+        <div class="price-box">
+          <span class="price">€99.00</span><span class="usd-approx">(approx. $109 USD)</span>
+        </div>
+        <div class="shipping-selector">
+          <label>Shipping Destination:</label>
+          <select onchange="updateShipping(this)">
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
+          </select>
+        </div>
+        <div class="total-line">Total with shipping: €119.00 (~$131 USD)</div>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_PA12_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+    <!-- 6. TM45/48 & HSR45/48 - ALUMINUM -->
+    <article class="product-card" data-base-eur="219" data-base-usd="240" data-link-eu="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_ALU_EU" data-link-world="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_ALU_WORLD">
+      <img src="images/tm45-alu.jpg" alt="TM45/48 HSR45/48 Intake Manifold in 3D-Printed Aluminum">
+      <div class="product-info">
+        <div class="badge-row">
+          <span class="badge badge-alu">3D-Printed Aluminum</span>
+          <span class="badge badge-origin-cn">Made in China</span>
+        </div>
+        <h2>Single-Carb Manifold — TM45/48 &amp; HSR45/48 (Aluminum)</h2>
+        <p class="description">High-flow 3D-printed metal large-bore intake manifold engineered for performance 660 engines running 45mm or 48mm Mikuni carburetors.</p>
+        <ul class="specs">
+          <li><strong>Carburetor fitment:</strong> Mikuni TM45 / TM48 &amp; Mikuni HSR45 / HSR48</li>
+          <li><strong>Included hardware:</strong> Cylinder head paper gasket</li>
+          <li><strong>Required rubber boot (not included):</strong> Mikuni HS42/018-45 (for HSR45/TM45) or HS42/062-48K (for HSR48/TM48)</li>
+          <li><strong>Material &amp; Origin:</strong> Industrial 3D-printed Aluminum — Manufactured in China</li>
+        </ul>
+        <div class="price-box">
+          <span class="price">€219.00</span><span class="usd-approx">(approx. $240 USD)</span>
+        </div>
+        <div class="shipping-selector">
+          <label>Shipping Destination:</label>
+          <select onchange="updateShipping(this)">
+            <option value="eu">Within EU (+ €20 / ~$22 USD freight)</option>
+            <option value="world">Outside EU (+ €40 / ~$44 USD freight)</option>
+          </select>
+        </div>
+        <div class="total-line">Total with shipping: €239.00 (~$262 USD)</div>
+        <a href="https://www.paypal.com/ncp/payment/YOUR_LINK_TM45_ALU_EU" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy with PayPal</a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <h3>Shipping &amp; Customs Disclaimer</h3>
+    <p><strong>Where We Ship:</strong> All parts are brand new and shipped with tracking from Sweden. We ship to all <strong>EU Member States (€20 freight)</strong> as well as reliable international destinations including the <strong>UK, Norway, Switzerland, USA, Canada, Australia, New Zealand, and Japan (€40 freight)</strong>.</p>
+    <p><strong>Excluded Destinations:</strong> In compliance with EU export regulations and international carrier restrictions, we <strong>do not ship</strong> to Russia, Belarus, Iran, North Korea, Syria, occupied territories in Ukraine, or active conflict zones with suspended postal service (such as Yemen, Sudan, South Sudan, Somalia, Libya, Afghanistan, and Haiti). Orders placed from unsupported regions or with incorrect shipping tiers will be canceled and refunded minus non-refundable payment processing fees.</p>
+    <p><strong>Customs &amp; Currency Notice:</strong> All transactions are billed in <strong>Euros (€)</strong>; USD amounts shown are approximate guides (~1 EUR = 1.10 USD) and PayPal converts at its live rate. Buyers outside the EU are responsible for any local import duties, customs clearance fees, or VAT assessed upon arrival.</p>
+  </footer>
+
+  <script>
+    function updateShipping(selectElement) {
+      const card = selectElement.closest('.product-card');
+      const baseEur = parseInt(card.getAttribute('data-base-eur'), 10);
+      const baseUsd = parseInt(card.getAttribute('data-base-usd'), 10);
+      const totalLine = card.querySelector('.total-line');
+      const paypalBtn = card.querySelector('.paypal-btn');
+
+      if (selectElement.value === 'eu') {
+        totalLine.textContent = `Total with shipping: €${baseEur + 20}.00 (~$${baseUsd + 22} USD)`;
+        paypalBtn.href = card.getAttribute('data-link-eu');
+      } else {
+        totalLine.textContent = `Total with shipping: €${baseEur + 40}.00 (~$${baseUsd + 44} USD)`;
+        paypalBtn.href = card.getAttribute('data-link-world');
+      }
+    }
+  </script>
+
+</body>
+</html>
